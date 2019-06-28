@@ -3,6 +3,7 @@
     {
       "nome": "CESARI",
       "id": 1,
+      "colore": "verde",
       "tappe": [
         "6A",
         "5A",
@@ -15,6 +16,7 @@
     {
       "nome": "AUGUSTI",
       "id": 2,
+      "colore": "bianco",
       "tappe": [
         "2B",
         "6B",
@@ -22,13 +24,14 @@
         "9A",
         "11A",
         "PAUSA",
-        "13A",
+        "13B",
         "FINE"
       ]
     },
     {
       "nome": "TRAIANEI",
       "id": 3,
+      "colore": "arancione",
       "tappe": [
         "2C",
         "6B",
@@ -36,13 +39,14 @@
         "10A",
         "12A",
         "PAUSA",
-        "13A",
+        "13C",
         "FINE"
       ]
     },
     {
       "nome": "ADRIANI",
       "id": 4,
+      "colore": "viola",
       "tappe": [
         "2A",
         "6C",
@@ -55,6 +59,7 @@
     {
       "nome": "AURELIANI",
       "id": 5,
+      "colore": "rosso",
       "tappe": [
         "3A",
         "6D",
@@ -72,8 +77,8 @@
       "nome": "PAUSA",
       "testo": "Pausa di 15 minuti",
       "immagine": "/assets/img/tappe/pausa.jpg",
-      "coordinatex": "",
-      "coordinatey": "",
+      "coordinatex": "41.906908",
+      "coordinatey": "12.465677",
       "abilitata": 1,
       "completata": 0
     },
@@ -117,7 +122,7 @@
           }
         ],
         "rispostavalida": "1",
-        "parolaassociata": ""
+        "parolaassociata": "IN"
       }
     },
     {
@@ -150,7 +155,7 @@
           }
         ],
         "rispostavalida": "2",
-        "parolaassociata": ""
+        "parolaassociata": "2021:"
       }
     },
     {
@@ -183,7 +188,7 @@
           }
         ],
         "rispostavalida": "4",
-        "parolaassociata": ""
+        "parolaassociata": "ITALY"
       }
     },
     {
@@ -216,7 +221,7 @@
           }
         ],
         "rispostavalida": "2",
-        "parolaassociata": ""
+        "parolaassociata": "OF"
       }
     },
     {
@@ -282,7 +287,7 @@
           }
         ],
         "rispostavalida": "2",
-        "parolaassociata": ""
+        "parolaassociata": "LET'S"
       }
     },
     {
@@ -315,7 +320,7 @@
           }
         ],
         "rispostavalida": "4",
-        "parolaassociata": ""
+        "parolaassociata": "COVERAGE"
       }
     },
     {
@@ -348,7 +353,7 @@
           }
         ],
         "rispostavalida": "1",
-        "parolaassociata": ""
+        "parolaassociata": "A"
       }
     },
     {
@@ -381,7 +386,7 @@
           }
         ],
         "rispostavalida": "1",
-        "parolaassociata": ""
+        "parolaassociata": "STEP"
       }
     },
     {
@@ -414,7 +419,7 @@
           }
         ],
         "rispostavalida": "3",
-        "parolaassociata": ""
+        "parolaassociata": "AXP"
       }
     },
     {
@@ -447,7 +452,7 @@
           }
         ],
         "rispostavalida": "1",
-        "parolaassociata": ""
+        "parolaassociata": "CHANGE"
       }
     },
     {
@@ -579,7 +584,7 @@
           }
         ],
         "rispostavalida": "2",
-        "parolaassociata": ""
+        "parolaassociata": "TOGHETER!"
       }
     },
     {
@@ -612,7 +617,7 @@
           }
         ],
         "rispostavalida": "4",
-        "parolaassociata": ""
+        "parolaassociata": "TRANSFORMATION"
       }
     },
     {
@@ -645,7 +650,7 @@
           }
         ],
         "rispostavalida": "1",
-        "parolaassociata": ""
+        "parolaassociata": "GET"
       }
     },
     {
@@ -678,7 +683,7 @@
           }
         ],
         "rispostavalida": "3",
-        "parolaassociata": ""
+        "parolaassociata": "THERE"
       }
     },
     {
@@ -711,7 +716,7 @@
           }
         ],
         "rispostavalida": "4",
-        "parolaassociata": ""
+        "parolaassociata": "ALL"
       }
     }
   ],

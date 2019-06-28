@@ -1,9 +1,11 @@
 // tslint:disable-next-line:no-namespace
 export namespace Modello {
     export class Gruppo {
+        
         public nome: string;
         public id: number;
         public tappe: Array<string>;
+        public colore: string;
     }
 
     export class Tappa {
