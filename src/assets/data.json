@@ -1,0 +1,854 @@
+{
+  "gruppi": [
+    {
+      "nome": "CESARI",
+      "id": 1,
+      "tappe": [
+        "2A",
+        "6A",
+        "5A",
+        "PAUSA",
+        "12A",
+        "13A"
+      ]
+    },
+    {
+      "nome": "AUGUSTI",
+      "id": 2,
+      "tappe": [
+        "",
+        "",
+        "",
+        "",
+        ""
+      ]
+    },
+    {
+      "nome": "TRAIANEI",
+      "id": 3,
+      "tappe": [
+        "",
+        "",
+        "",
+        "",
+        ""
+      ]
+    },
+    {
+      "nome": "ADRIANI",
+      "id": 4,
+      "tappe": [
+        "",
+        "",
+        "",
+        "",
+        ""
+      ]
+    },
+    {
+      "nome": "AURELIANI",
+      "id": 5,
+      "tappe": [
+        "",
+        "",
+        "",
+        "",
+        ""
+      ]
+    }
+  ],
+  "tappe": [
+    {
+      "codice": "PAUSA",
+      "nome": "PAUSA",
+      "testo": "Pausa di 15 minuti",
+      "immagine": "/assets/img/tappe/",
+      "coordinatex": "",
+      "coordinatey": "",
+      "abilitata": 1,
+      "completata": 0
+    },
+    {
+      "codice": "2A",
+      "nome": "Via Fori Imperiali",
+      "testo": "",
+      "immagine": "/assets/img/tappe/Fori_imperiali.jpg",
+      "coordinatex": "41.893250",
+      "coordinatey": "12.491111",
+      "abilitata": 1,
+      "completata": 0,
+      "domanda": {
+        "testo": "Cosa è scritto sotto la statua di Giulio Cesare?",
+        "risposte": [
+          {
+            "testo": "C IULIO CAESARI DICT PERPETUO ",
+            "codice": "1"
+          },
+          {
+            "testo": "CAIUS G CAESARI IMP",
+            "codice": "2"
+          },
+          {
+            "testo": "IMP IULIUS CAESARI",
+            "codice": "3"
+          },
+          {
+            "testo": "C IULIO CAESAR DICTATOR PERPETUS",
+            "codice": "4"
+          }
+        ],
+        "rispostavalida": "1",
+        "parolaassociata": ""
+      }
+    },
+    {
+      "codice": "2B",
+      "nome": "Via Fori Imperiali",
+      "testo": "",
+      "immagine": "/assets/img/tappe/Fori_imperiali.jpg",
+      "coordinatex": "41.893250",
+      "coordinatey": "12.487028",
+      "abilitata": 1,
+      "completata": 0,
+      "domanda": {
+        "testo": "Cosa è scritto sotto la statua di Augusto?",
+        "risposte": [
+          {
+            "testo": "IMP CAESARI DIVIT AUGUSTO PATRI PATRIAE",
+            "codice": "1"
+          },
+          {
+            "testo": "IMP CAESARI DIVI NF AUGUSTO PATRI PATRIAE",
+            "codice": "2"
+          },
+          {
+            "testo": "IMP CAESARI OCT AUGUSTO PATRI PATRIAE",
+            "codice": "3"
+          },
+          {
+            "testo": "IMP CAESARI DIVIT AUGUSTO",
+            "codice": "4"
+          }
+        ],
+        "rispostavalida": "2",
+        "parolaassociata": ""
+      }
+    },
+    {
+      "codice": "2C",
+      "nome": "Via Fori Imperiali",
+      "testo": "",
+      "immagine": "/assets/img/tappe/Fori_imperiali.jpg",
+      "coordinatex": "41.893250",
+      "coordinatey": "12.487028",
+      "abilitata": 1,
+      "completata": 0,
+      "domanda": {
+        "testo": "Cosa è scritto sotto la statua di Traiano?",
+        "risposte": [
+          {
+            "testo": "IMPERATOR F TRAIANO OPTIMO PRINCIPI",
+            "codice": "1"
+          },
+          {
+            "testo": "IMP CAESARI NERVE F TRAIANO OPTIMUS PRINCIPI",
+            "codice": "2"
+          },
+          {
+            "testo": "IMP CAESAR NERVAE E TRAIANO OPTIMO PRINCIPI",
+            "codice": "3"
+          },
+          {
+            "testo": "IMP CAESARI NERVAE F TRAIANO OPTIMO PRINCIPI",
+            "codice": "4"
+          }
+        ],
+        "rispostavalida": "4",
+        "parolaassociata": ""
+      }
+    },
+    {
+      "codice": "3A",
+      "nome": "Campidoglio",
+      "testo": "",
+      "immagine": "/assets/img/tappe/Campidoglio.jpg",
+      "coordinatex": "41.893270",
+      "coordinatey": "12.482883",
+      "abilitata": 1,
+      "completata": 0,
+      "domanda": {
+        "testo": "Quanti zoccoli della statua equestre di Marco Aurelio poggiano a terra?",
+        "risposte": [
+          {
+            "testo": "1",
+            "codice": "1"
+          },
+          {
+            "testo": "2",
+            "codice": "2"
+          },
+          {
+            "testo": "3",
+            "codice": "3"
+          },
+          {
+            "testo": "4",
+            "codice": "4"
+          }
+        ],
+        "rispostavalida": "2",
+        "parolaassociata": ""
+      }
+    },
+    {
+      "codice": "4A",
+      "nome": "Piazza Barberini",
+      "testo": "",
+      "immagine": "/assets/img/tappe/Piazza_Barberini.jpg",
+      "coordinatex": "41.904",
+      "coordinatey": "12.488699999999994",
+      "abilitata": 1,
+      "completata": 0,
+      "domanda": {
+        "testo": "All'angolo con via degli Avignonesi, una lapide in omaggio a Paolo V, ci indica l’antico nome della piazza. Qual era questo nome?",
+        "risposte": [
+          {
+            "testo": "Piazza Grimanam",
+            "codice": "1"
+          },
+          {
+            "testo": "Piazza Grimana",
+            "codice": "2"
+          },
+          {
+            "testo": "Piazza Grati",
+            "codice": "3"
+          },
+          {
+            "testo": "Piazza Paolo V",
+            "codice": "4"
+          }
+        ],
+        "rispostavalida": "2",
+        "parolaassociata": ""
+      }
+    },
+    {
+      "codice": "5A",
+      "nome": "Piazza di Spagna",
+      "testo": "",
+      "immagine": "/assets/img/tappe/Piazza_di_Spagna.jpg",
+      "coordinatex": "41.9065253",
+      "coordinatey": "12.4812954",
+      "abilitata": 1,
+      "completata": 0,
+      "domanda": {
+        "testo": "Ai piedi della scalinata sorge la famosa “Barcaccia” del Bernini.Perché il monumento è immerso per metà nell’acqua?",
+        "risposte": [
+          {
+            "testo": "Per ricordare le frequenti alluvioni del Tevere",
+            "codice": "1"
+          },
+          {
+            "testo": "Per risolvere un problema di scarsa pressione dell’acqua",
+            "codice": "2"
+          },
+          {
+            "testo": "Per facilitare l’accesso di chi voleva dissetarsi",
+            "codice": "3"
+          },
+          {
+            "testo": "Per scopi architettonici",
+            "codice": "4"
+          }
+        ],
+        "rispostavalida": "2",
+        "parolaassociata": ""
+      }
+    },
+    {
+      "codice": "6A",
+      "nome": "Fontana di Trevi",
+      "testo": "",
+      "immagine": "/assets/img/tappe/Fontana_di_Trevi.jpg",
+      "coordinatex": "41.900796",
+      "coordinatey": "12.4834874",
+      "abilitata": 1,
+      "completata": 0,
+      "domanda": {
+        "testo": "Quante finestre ha il lato sud del Palazzo Poli?",
+        "risposte": [
+          {
+            "testo": "20",
+            "codice": "1"
+          },
+          {
+            "testo": "21",
+            "codice": "2"
+          },
+          {
+            "testo": "22",
+            "codice": "3"
+          },
+          {
+            "testo": "23",
+            "codice": "4"
+          }
+        ],
+        "rispostavalida": "4",
+        "parolaassociata": ""
+      }
+    },
+    {
+      "codice": "6B",
+      "nome": "Fontana di Trevi",
+      "testo": "",
+      "immagine": "/assets/img/tappe/Fontana_di_Trevi.jpg",
+      "coordinatex": "41.900796",
+      "coordinatey": "12.4834874",
+      "abilitata": 1,
+      "completata": 0,
+      "domanda": {
+        "testo": "Alla Fontana di Trevi non si avvicinano gli uccelli che sporcano molti altri monumenti della città. Perché?",
+        "risposte": [
+          {
+            "testo": "La fonte è elettrificata",
+            "codice": "1"
+          },
+          {
+            "testo": "L'acqua è salata",
+            "codice": "2"
+          },
+          {
+            "testo": "Ci sono degli impiegati che li cacciano via",
+            "codice": "3"
+          },
+          {
+            "testo": "L'acqua è troppo fredda",
+            "codice": "4"
+          }
+        ],
+        "rispostavalida": "1",
+        "parolaassociata": ""
+      }
+    },
+    {
+      "codice": "6C",
+      "nome": "Fontana di Trevi",
+      "testo": "",
+      "immagine": "/assets/img/tappe/Fontana_di_Trevi.jpg",
+      "coordinatex": "41.900796",
+      "coordinatey": "12.4834874",
+      "abilitata": 1,
+      "completata": 0,
+      "domanda": {
+        "testo": "Cosa rappresenta la Fontana di Trevi?",
+        "risposte": [
+          {
+            "testo": "La statua di 'Oceano' sopra un carro, trainato da due cavalli marini, guidati da altrettanti tritoni",
+            "codice": "1"
+          },
+          {
+            "testo": "Zeus su un carro e due dei suoi figli",
+            "codice": "2"
+          },
+          {
+            "testo": "Poseidone e due tritoni",
+            "codice": "3"
+          },
+          {
+            "testo": "Nettuno e due giganti del mare",
+            "codice": "4"
+          }
+        ],
+        "rispostavalida": "1",
+        "parolaassociata": ""
+      }
+    },
+    {
+      "codice": "6D",
+      "nome": "Fontana di Trevi",
+      "testo": "",
+      "immagine": "/assets/img/tappe/Fontana_di_Trevi.jpg",
+      "coordinatex": "41.900796",
+      "coordinatey": "12.4834874",
+      "abilitata": 1,
+      "completata": 0,
+      "domanda": {
+        "testo": "Dopo la famosa scena di 'La Dolce Vita' nella quale Anita Ekberg entra nella fontana e invita Marcello Mastroianni a fare il bagno con lei, alcuni turisti hanno pensato di fare la stessa cosa. A quanto ammonta la multa massima che può essere comminata in questo caso?",
+        "risposte": [
+          {
+            "testo": "100€",
+            "codice": "1"
+          },
+          {
+            "testo": "200€",
+            "codice": "2"
+          },
+          {
+            "testo": "500€",
+            "codice": "3"
+          },
+          {
+            "testo": "1500€",
+            "codice": "4"
+          }
+        ],
+        "rispostavalida": "3",
+        "parolaassociata": ""
+      }
+    },
+    {
+      "codice": "7A",
+      "nome": "Piazza Colonna",
+      "testo": "",
+      "immagine": "/assets/img/tappe/Piazza_Colonna.jpg",
+      "coordinatex": "41.901202",
+      "coordinatey": "12.480327",
+      "abilitata": 1,
+      "completata": 0,
+      "domanda": {
+        "testo": "Cos’è raffigurato a metà altezza sulla colonna, tra le sculture a rilievo che rievocano le guerre di Marco Aurelio rispettivamente contro i Germani e i Sarmati?",
+        "risposte": [
+          {
+            "testo": "Una Vittoria",
+            "codice": "1"
+          },
+          {
+            "testo": "L'imperatore",
+            "codice": "2"
+          },
+          {
+            "testo": "Il comandante della legione",
+            "codice": "3"
+          },
+          {
+            "testo": "un drago alato",
+            "codice": "4"
+          }
+        ],
+        "rispostavalida": "1",
+        "parolaassociata": ""
+      }
+    },
+    {
+      "codice": "8A",
+      "nome": "Montecitorio",
+      "testo": "",
+      "immagine": "/assets/img/tappe/Montecitorio.jpg",
+      "coordinatex": "41.9004016",
+      "coordinatey": "12.478659",
+      "abilitata": 1,
+      "completata": 0,
+      "domanda": {
+        "testo": "Di che materiale è fatto lo gnomone dell’obelisco?",
+        "risposte": [
+          {
+            "testo": "Rame",
+            "codice": "1"
+          },
+          {
+            "testo": "Acciaio",
+            "codice": "2"
+          },
+          {
+            "testo": "Bronzo",
+            "codice": "3"
+          },
+          {
+            "testo": "Ferro",
+            "codice": "4"
+          }
+        ],
+        "rispostavalida": "3",
+        "parolaassociata": ""
+      }
+    },
+    {
+      "codice": "9A",
+      "nome": "Chiesa di Sant'Ignazio Di Loyola",
+      "testo": "",
+      "immagine": "/assets/img/tappe/Chiesa_di_S_Ignazio_di_Loyola.jpg",
+      "coordinatex": "41.8992445",
+      "coordinatey": "12.4801357",
+      "abilitata": 1,
+      "completata": 0,
+      "domanda": {
+        "testo": "Da quali punti è possibile vedere le famose illusioni ottiche di Andrea del Pozzo?",
+        "risposte": [
+          {
+            "testo": "Dalle navate laterali",
+            "codice": "1"
+          },
+          {
+            "testo": "Dal centro della navata centrale e dal tondo dorato verso l’altare",
+            "codice": "2"
+          },
+          {
+            "testo": "Dall’ingresso della chiesa",
+            "codice": "3"
+          },
+          {
+            "testo": "Dall’altare e dall’ingresso della chiesa",
+            "codice": "4"
+          }
+        ],
+        "rispostavalida": "2",
+        "parolaassociata": ""
+      }
+    },
+    {
+      "codice": "10A",
+      "nome": "Piazza della Minerva",
+      "testo": "",
+      "immagine": "/assets/img/tappe/Piazza_della_Minerva.jpg",
+      "coordinatex": "41.897801",
+      "coordinatey": "12.477355",
+      "abilitata": 1,
+      "completata": 0,
+      "domanda": {
+        "testo": "In quale anno la Vergine intervenne per fermare l’alluvione che stava sommergendo Roma?",
+        "risposte": [
+          {
+            "testo": "1633",
+            "codice": "1"
+          },
+          {
+            "testo": "1701",
+            "codice": "2"
+          },
+          {
+            "testo": "1530",
+            "codice": "3"
+          },
+          {
+            "testo": "1927",
+            "codice": "4"
+          }
+        ],
+        "rispostavalida": "3",
+        "parolaassociata": ""
+      }
+    },
+    {
+      "codice": "11A",
+      "nome": "Pantheon",
+      "testo": "",
+      "immagine": "/assets/img/tappe/Pantheon.jpg",
+      "coordinatex": "41.8992901",
+      "coordinatey": "12.4770318",
+      "abilitata": 1,
+      "completata": 0,
+      "domanda": {
+        "testo": "Una delle colonne esterne del pronao è inciso il simbolo di un famoso Papa che aveva voluto la ricostruzione della colonna. Qual è questo simbolo?",
+        "risposte": [
+          {
+            "testo": "Una lumaca",
+            "codice": "1"
+          },
+          {
+            "testo": "Un'ape",
+            "codice": "2"
+          },
+          {
+            "testo": "Un grifone",
+            "codice": "3"
+          },
+          {
+            "testo": "Una volpe",
+            "codice": "4"
+          }
+        ],
+        "rispostavalida": "2",
+        "parolaassociata": ""
+      }
+    },
+    {
+      "codice": "12A",
+      "nome": "Piazza Navona",
+      "testo": "",
+      "immagine": "/assets/img/tappe/Piazza_Navona.jpg",
+      "coordinatex": "41.8989155",
+      "coordinatey": "12.4731185",
+      "abilitata": 1,
+      "completata": 0,
+      "domanda": {
+        "testo": "Da dove deriva il toponimo attuale?",
+        "risposte": [
+          {
+            "testo": "Dalle numerose battaglie navali che venivano ospitate nella piazza (nauromachie)",
+            "codice": "1"
+          },
+          {
+            "testo": "Dall’immenso mercato le cui materie prime venivano trasportate via nave sul Tevere e poi facilmente esposte nella Piazza del Mercato (altro nome della piazza)",
+            "codice": "2"
+          },
+          {
+            "testo": "Dalla forma della piazza che ricorda un’antica nave romana",
+            "codice": "3"
+          },
+          {
+            "testo": "Dagli Agones (giochi) che si tenevano nella piazza (originariamente uno stadio)",
+            "codice": "4"
+          }
+        ],
+        "rispostavalida": "4",
+        "parolaassociata": ""
+      }
+    },
+    {
+      "codice": "13A",
+      "nome": "Statua di Pasquino",
+      "testo": "",
+      "immagine": "/assets/img/tappe/Statua_di_Pasquino.jpg",
+      "coordinatex": "41.8978311",
+      "coordinatey": "12.472157",
+      "abilitata": 1,
+      "completata": 0,
+      "domanda": {
+        "testo": "Quali sono gli ingredienti della ricetta tradizionale degli 'Spaghetti alla Amatriciana'? (Se non sai la risposta… chiedi ad un romano!)",
+        "risposte": [
+          {
+            "testo": "Pecorino di Amatrice, guanciale, pomodori pelati",
+            "codice": "1"
+          },
+          {
+            "testo": "Pecorino Romano, olio, guanciale, pomodori pelati",
+            "codice": "2"
+          },
+          {
+            "testo": "Pecorino Romano, olio, pancetta di Amatrice, pomodori pelati",
+            "codice": "3"
+          },
+          {
+            "testo": "Pecorino Romano, guanciale, pomodori S.Marzano",
+            "codice": "4"
+          }
+        ],
+        "rispostavalida": "1",
+        "parolaassociata": ""
+      }
+    },
+    {
+      "codice": "13B",
+      "nome": "Statua di Pasquino",
+      "testo": "",
+      "immagine": "/assets/img/tappe/Statua_di_Pasquino.jpg",
+      "coordinatex": "41.8978311",
+      "coordinatey": "12.472157",
+      "abilitata": 1,
+      "completata": 0,
+      "domanda": {
+        "testo": "La tipica ricetta '...alla Romana' contiene i seguenti ingredienti: acciughe, aglio, salvia, olio e pepe. Qual è l’ingrediente più importante che manca e che dà il nome alla ricetta? (Se non sai la risposta… chiedi ad un romano!)",
+        "risposte": [
+          {
+            "testo": "Trippa",
+            "codice": "1"
+          },
+          {
+            "testo": "Puntarelle",
+            "codice": "2"
+          },
+          {
+            "testo": "Abbacchio",
+            "codice": "3"
+          },
+          {
+            "testo": "Carciofi",
+            "codice": "4"
+          }
+        ],
+        "rispostavalida": "3",
+        "parolaassociata": ""
+      }
+    },
+    {
+      "codice": "13C",
+      "nome": "Statua di Pasquino",
+      "testo": "",
+      "immagine": "/assets/img/tappe/Statua_di_Pasquino.jpg",
+      "coordinatex": "41.8978311",
+      "coordinatey": "12.472157",
+      "abilitata": 1,
+      "completata": 0,
+      "domanda": {
+        "testo": "La tipica ricetta '...alla Romana' contiene i seguenti ingredienti: mentuccia romana, prezzemolo, olio, pepe, aglio, limone. Qual è l’ingrediente più importante che manca e che dà il nome alla ricetta? (Se non sai la risposta… chiedi ad un romano!)",
+        "risposte": [
+          {
+            "testo": "Trippa",
+            "codice": "1"
+          },
+          {
+            "testo": "Puntarelle",
+            "codice": "2"
+          },
+          {
+            "testo": "Abbacchio",
+            "codice": "3"
+          },
+          {
+            "testo": "Carciofi",
+            "codice": "4"
+          }
+        ],
+        "rispostavalida": "4",
+        "parolaassociata": ""
+      }
+    }
+  ],
+  "domandetemporizzate": [
+    {
+      "testo": "testo 1",
+      "codice": 1,
+      "punteggio": 1,
+      "risposte": [
+        {
+          "codice": 1,
+          "testo": "1"
+        },{
+          "codice": 2,
+          "testo": "2"
+        },{
+          "codice": 3,
+          "testo": "3"
+        },{
+          "codice": 4,
+          "testo": "4"
+        }
+      ],
+      "codicerisposta": 1
+    },
+    {
+      "testo": "",
+      "codice": "",
+      "punteggio": 1,
+      "risposte": [
+        {
+          "codice": "",
+          "testo": ""
+        }
+      ],
+      "codicerisposta": ""
+    },
+    {
+      "testo": "",
+      "codice": "",
+      "punteggio": 1,
+      "risposte": [
+        {
+          "codice": "",
+          "testo": ""
+        }
+      ],
+      "codicerisposta": ""
+    },
+    {
+      "testo": "",
+      "codice": "",
+      "punteggio": 1,
+      "risposte": [
+        {
+          "codice": "",
+          "testo": ""
+        }
+      ],
+      "codicerisposta": ""
+    },
+    {
+      "testo": "",
+      "codice": "",
+      "punteggio": 1,
+      "risposte": [
+        {
+          "codice": "",
+          "testo": ""
+        }
+      ],
+      "codicerisposta": ""
+    },
+    {
+      "testo": "",
+      "codice": "",
+      "punteggio": 1,
+      "risposte": [
+        {
+          "codice": "",
+          "testo": ""
+        }
+      ],
+      "codicerisposta": ""
+    },
+    {
+      "testo": "",
+      "codice": "",
+      "punteggio": 1,
+      "risposte": [
+        {
+          "codice": "",
+          "testo": ""
+        }
+      ],
+      "codicerisposta": ""
+    },
+    {
+      "testo": "",
+      "codice": "",
+      "punteggio": 1,
+      "risposte": [
+        {
+          "codice": "",
+          "testo": ""
+        }
+      ],
+      "codicerisposta": ""
+    },
+    {
+      "testo": "",
+      "codice": "",
+      "punteggio": 1,
+      "risposte": [
+        {
+          "codice": "",
+          "testo": ""
+        }
+      ],
+      "codicerisposta": ""
+    },
+    {
+      "testo": "",
+      "codice": "",
+      "punteggio": 1,
+      "risposte": [
+        {
+          "codice": "",
+          "testo": ""
+        }
+      ],
+      "codicerisposta": ""
+    },
+    {
+      "testo": "",
+      "codice": "",
+      "punteggio": 1,
+      "risposte": [
+        {
+          "codice": "",
+          "testo": ""
+        }
+      ],
+      "codicerisposta": ""
+    },
+    {
+      "testo": "",
+      "codice": "",
+      "punteggio": 1,
+      "risposte": [
+        {
+          "codice": "",
+          "testo": ""
+        }
+      ],
+      "codicerisposta": ""
+    }
+  ]
+}

@@ -1,0 +1,522 @@
+{
+  "gruppi": [
+    {
+      "nome": "nomegruppo1",
+      "id": 1,
+      "tappe": [
+        {
+          "codice": 1,
+          "nome": "tappa1",
+          "testo": "testo tappa1",
+          "immagine": "/assets/img/tappe/BGGameScreen.png",
+          "coordinatex": 43.31,
+          "coordinatey": 10.41,
+          "abilitata": 1,
+          "completata": 0,
+          "domanda": {
+            "testo": "testo domanda tappa1",
+            "risposte": [
+              {
+                "testo": "risposta1 tappa1",
+                "codice": 1
+              },
+              {
+                "testo": "risposta2 tappa1",
+                "codice": 2
+              },
+              {
+                "testo": "risposta3 tappa1",
+                "codice": 3
+              },
+              {
+                "testo": "risposta4 tappa1",
+                "codice": 4
+              }
+            ],
+            "rispostavalida": 1,
+            "parolaassociata": "parolaassociata tappa1"
+          }
+        },
+        {
+          "codice": 2,
+          "nome": "tappa2",
+          "testo": "",
+          "immagine": "/assets/img/tappe/shapes.svg",
+          "coordinatex": "",
+          "coordinatey": "",
+          "abilitata": 1,
+          "completata": 0,
+          "domanda": {
+            "testo": "",
+            "risposte": [
+              {
+                "testo": "pippo",
+                "codice": 1
+              },
+              {
+                "testo": "pluto",
+                "codice": 2
+              },
+              {
+                "testo": "",
+                "codice": 3
+              },
+              {
+                "testo": "",
+                "codice": 4
+              }
+            ],
+            "rispostavalida": 2,
+            "parolaassociata": "parolaassociata tappa2"
+          }
+        },
+        {
+          "codice": 3,
+          "nome": "tappa3",
+          "testo": "",
+          "immagine": "",
+          "coordinatex": "",
+          "coordinatey": "",
+          "abilitata": 1,
+          "completata": 0,
+          "domanda": {
+            "testo": "",
+            "risposte": [
+              {
+                "risposta1": {
+                  "testo": "",
+                  "codice": ""
+                },
+                "risposta2": {
+                  "testo": "",
+                  "codice": ""
+                },
+                "risposta3": {
+                  "testo": "",
+                  "codice": ""
+                },
+                "risposta4": {
+                  "testo": "",
+                  "codice": ""
+                }
+              }
+            ],
+            "rispostavalida": "codiceRispostaValida",
+            "parolaassociata": "parolaassociata tappa3"
+          }
+        },
+        {
+          "codice": 4,
+          "nome": "tappa4",
+          "testo": "",
+          "immagine": "",
+          "coordinatex": "",
+          "coordinatey": "",
+          "abilitata": 1,
+          "completata": 0,
+          "domanda": {
+            "testo": "",
+            "risposte": [
+              {
+                "risposta1": {
+                  "testo": "",
+                  "codice": ""
+                },
+                "risposta2": {
+                  "testo": "",
+                  "codice": ""
+                },
+                "risposta3": {
+                  "testo": "",
+                  "codice": ""
+                },
+                "risposta4": {
+                  "testo": "",
+                  "codice": ""
+                }
+              }
+            ],
+            "rispostavalida": "codiceRispostaValida",
+            "parolaassociata": "parolaassociata tappa4"
+          }
+        },
+        {
+          "codice": 5,
+          "nome": "tappa 5",
+          "testo": "",
+          "immagine": "",
+          "coordinatex": "",
+          "coordinatey": "",
+          "abilitata": 1,
+          "completata": 0,
+          "domanda": {
+            "testo": "",
+            "risposte": [
+              {
+                "risposta1": {
+                  "testo": "",
+                  "codice": ""
+                },
+                "risposta2": {
+                  "testo": "",
+                  "codice": ""
+                },
+                "risposta3": {
+                  "testo": "",
+                  "codice": ""
+                },
+                "risposta4": {
+                  "testo": "",
+                  "codice": ""
+                }
+              }
+            ],
+            "rispostavalida": "codiceRispostaValida",
+            "parolaassociata": "parolaassociata tappa5"
+          }
+        }
+      ]
+    },
+    {
+      "nome": "nomegruppo2",
+      "id": 2,
+      "tappe": [
+        "",
+        "",
+        "",
+        "",
+        ""
+      ]
+    },
+    {
+      "nome": "nomegruppo3",
+      "id": 3,
+      "tappe": [
+        "",
+        "",
+        "",
+        "",
+        ""
+      ]
+    },
+    {
+      "nome": "nomegruppo4",
+      "id": 4,
+      "tappe": [
+        "",
+        "",
+        "",
+        "",
+        ""
+      ]
+    },
+    {
+      "nome": "nomegruppo5",
+      "id": 5,
+      "tappe": [
+        "",
+        "",
+        "",
+        "",
+        ""
+      ]
+    }
+  ],
+  "tappe": [
+    {
+      "codice": "",
+      "nome": "",
+      "testo": "",
+      "immagine": "",
+      "coordinatex": "",
+      "coordinatey": "",
+      "abilitata": 1,
+      "completata": 0,
+      "domanda": {
+        "testo": "",
+        "risposte": [
+          {
+            "risposta1": {
+              "testo": "",
+              "codice": ""
+            },
+            "risposta2": {
+              "testo": "",
+              "codice": ""
+            },
+            "risposta3": {
+              "testo": "",
+              "codice": ""
+            },
+            "risposta4": {
+              "testo": "",
+              "codice": ""
+            }
+          }
+        ],
+        "rispostavalida": "codiceRispostaValida",
+        "parolaassociata": ""
+      }
+    },
+    {
+      "codice": "",
+      "nome": "",
+      "testo": "",
+      "immagine": "",
+      "coordinatex": "",
+      "coordinatey": "",
+      "abilitata": 1,
+      "completata": 0,
+      "domanda": {
+        "testo": "",
+        "risposte": [
+          {
+            "risposta1": {
+              "testo": "",
+              "codice": ""
+            },
+            "risposta2": {
+              "testo": "",
+              "codice": ""
+            },
+            "risposta3": {
+              "testo": "",
+              "codice": ""
+            },
+            "risposta4": {
+              "testo": "",
+              "codice": ""
+            }
+          }
+        ],
+        "rispostavalida": "codiceRispostaValida",
+        "parolaassociata": ""
+      }
+    },
+    {
+      "codice": "",
+      "nome": "",
+      "testo": "",
+      "immagine": "",
+      "coordinatex": "",
+      "coordinatey": "",
+      "abilitata": 1,
+      "completata": 0,
+      "domanda": {
+        "testo": "",
+        "risposte": [
+          {
+            "risposta1": {
+              "testo": "",
+              "codice": ""
+            },
+            "risposta2": {
+              "testo": "",
+              "codice": ""
+            },
+            "risposta3": {
+              "testo": "",
+              "codice": ""
+            },
+            "risposta4": {
+              "testo": "",
+              "codice": ""
+            }
+          }
+        ],
+        "rispostavalida": "codiceRispostaValida",
+        "parolaassociata": ""
+      }
+    },
+    {
+      "codice": "",
+      "nome": "",
+      "testo": "",
+      "immagine": "",
+      "coordinatex": "",
+      "coordinatey": "",
+      "abilitata": 1,
+      "completata": 0,
+      "domanda": {
+        "testo": "",
+        "risposte": [
+          {
+            "risposta1": {
+              "testo": "",
+              "codice": ""
+            },
+            "risposta2": {
+              "testo": "",
+              "codice": ""
+            },
+            "risposta3": {
+              "testo": "",
+              "codice": ""
+            },
+            "risposta4": {
+              "testo": "",
+              "codice": ""
+            }
+          }
+        ],
+        "rispostavalida": "codiceRispostaValida",
+        "parolaassociata": ""
+      }
+    }
+  ],
+  "domandetemporizzate": [
+    {
+      "testo": "testo 1",
+      "codice": 1,
+      "punteggio": 1,
+      "risposte": [
+        {
+          "codice": 1,
+          "testo": "1"
+        },{
+          "codice": 2,
+          "testo": "2"
+        },{
+          "codice": 3,
+          "testo": "3"
+        },{
+          "codice": 4,
+          "testo": "4"
+        }
+      ],
+      "codicerisposta": 1
+    },
+    {
+      "testo": "",
+      "codice": "",
+      "punteggio": 1,
+      "risposte": [
+        {
+          "codice": "",
+          "testo": ""
+        }
+      ],
+      "codicerisposta": ""
+    },
+    {
+      "testo": "",
+      "codice": "",
+      "punteggio": 1,
+      "risposte": [
+        {
+          "codice": "",
+          "testo": ""
+        }
+      ],
+      "codicerisposta": ""
+    },
+    {
+      "testo": "",
+      "codice": "",
+      "punteggio": 1,
+      "risposte": [
+        {
+          "codice": "",
+          "testo": ""
+        }
+      ],
+      "codicerisposta": ""
+    },
+    {
+      "testo": "",
+      "codice": "",
+      "punteggio": 1,
+      "risposte": [
+        {
+          "codice": "",
+          "testo": ""
+        }
+      ],
+      "codicerisposta": ""
+    },
+    {
+      "testo": "",
+      "codice": "",
+      "punteggio": 1,
+      "risposte": [
+        {
+          "codice": "",
+          "testo": ""
+        }
+      ],
+      "codicerisposta": ""
+    },
+    {
+      "testo": "",
+      "codice": "",
+      "punteggio": 1,
+      "risposte": [
+        {
+          "codice": "",
+          "testo": ""
+        }
+      ],
+      "codicerisposta": ""
+    },
+    {
+      "testo": "",
+      "codice": "",
+      "punteggio": 1,
+      "risposte": [
+        {
+          "codice": "",
+          "testo": ""
+        }
+      ],
+      "codicerisposta": ""
+    },
+    {
+      "testo": "",
+      "codice": "",
+      "punteggio": 1,
+      "risposte": [
+        {
+          "codice": "",
+          "testo": ""
+        }
+      ],
+      "codicerisposta": ""
+    },
+    {
+      "testo": "",
+      "codice": "",
+      "punteggio": 1,
+      "risposte": [
+        {
+          "codice": "",
+          "testo": ""
+        }
+      ],
+      "codicerisposta": ""
+    },
+    {
+      "testo": "",
+      "codice": "",
+      "punteggio": 1,
+      "risposte": [
+        {
+          "codice": "",
+          "testo": ""
+        }
+      ],
+      "codicerisposta": ""
+    },
+    {
+      "testo": "",
+      "codice": "",
+      "punteggio": 1,
+      "risposte": [
+        {
+          "codice": "",
+          "testo": ""
+        }
+      ],
+      "codicerisposta": ""
+    }
+  ]
+}

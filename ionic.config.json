@@ -1,0 +1,7 @@
+{
+  "name": "TeamBuilderApp",
+  "integrations": {
+    "cordova": {}
+  },
+  "type": "angular"
+}

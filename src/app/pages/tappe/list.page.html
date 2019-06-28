@@ -1,0 +1,22 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-menu-button></ion-menu-button>
+    </ion-buttons>
+    <ion-title>
+      Tappe
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+    <ion-label>Il tuo punteggio è {{punteggio}}</ion-label>
+  <ion-list>
+    <ion-item *ngFor="let tappa of elencoTappe"  (click)="goToTappa(tappa)" [ngClass]="tappa.completata ? 'completata' : (!tappa.abilitata ? 'disabilitata' : (getCodiceProssima() === tappa.codice ? 'prossima' : ''))">
+      <ion-label>{{tappa.nome}}</ion-label>
+      <ion-button *ngIf="tappa.abilitata === 1" (click)="disabilitaTappa(tappa); $event.stopPropagation()">Disabilita</ion-button>
+      <ion-button *ngIf="tappa.abilitata === 0" (click)="abilitaTappa(tappa); $event.stopPropagation()">Abilita</ion-button>
+    </ion-item>
+  </ion-list>
+
+</ion-content>

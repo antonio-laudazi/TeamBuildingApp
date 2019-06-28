@@ -1,0 +1,33 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-back-button slot="start" defaultHref="/list"></ion-back-button>
+    <ion-title>
+      {{tappaSelezionata.nome}}
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-card class="welcome-card">
+    <ion-card-content>
+      <ion-img src="{{tappaSelezionata.immagine}}"></ion-img>
+      <p>{{tappaSelezionata.testo}}</p>
+    </ion-card-content>
+  </ion-card>
+
+  <ion-list>
+    <ion-radio-group>
+      <ion-list-header>
+        <ion-text>{{tappaSelezionata.domanda.testo}}</ion-text>
+      </ion-list-header>
+
+      <ion-item *ngFor="let risposta of tappaSelezionata.domanda.risposte">
+        <ion-text>{{risposta.testo}}</ion-text>
+        <ion-radio slot="end" value={{risposta.codice}} (ionSelect)="rispostaChecked(risposta)"></ion-radio>
+      </ion-item>
+    </ion-radio-group>
+  </ion-list>
+
+  <ion-button (click)="salvaRisposta()">Salva risposta</ion-button>
+  <ion-button (click)="openMap()">Open Map</ion-button>
+</ion-content>
