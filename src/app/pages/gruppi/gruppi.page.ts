@@ -14,7 +14,7 @@ import { JsonResponse } from '../../models/json.namespace';
 })
 
 export class GruppiPage implements OnInit {
-  private gruppi: Array<Modello.Gruppo>;
+  public gruppi: Array<Modello.Gruppo>;
   private domandeTemporizzate: Array<Modello.DomandaTemporizzata>;
   private tappe: Array<Modello.Tappa>;
 
@@ -99,14 +99,50 @@ export class GruppiPage implements OnInit {
   }
 
   public saveGruppoScelto(gruppo: Modello.Gruppo) {
+
     this.storeService.clear();
+    this.storeService.salvaCondizioniAccettate();
     this.scheduleNotification();
     this.storeService.saveGruppoScelto(gruppo);
 
     // recupero le domande del gruppo e le metto in storage
     this.fileService.getTappe(gruppo.tappe).subscribe(res => {
       this.storeService.saveTappeScelte(res);
-      this.navCtr.navigateRoot('/list');// vado alla pagina successiva solo quando ho salvato in storage le tappe relative al gruppo scelto
+      this.navCtr.navigateRoot('/list'); // vado alla pagina successiva solo quando ho salvato in storage le tappe relative al gruppo scelto
     });
+  }
+
+  async presentAlertConfirm(gruppo) {
+    const alert = await this.alertCtrl.create({
+      header: 'Cambio Gruppo',
+      message: 'Cambiare il gruppo azzererà il percorso fatto fino ad adesso. Continuare?',
+      buttons: [
+        {
+          text: 'NO',
+          role: 'cancel',
+          cssClass: 'secondary',
+          handler: (blah) => {
+            console.log('Confirm Cancel: blah');
+          }
+        }, {
+          text: 'SI',
+          handler: () => {
+            this.storeService.clear();
+            this.storeService.salvaCondizioniAccettate();
+            this.scheduleNotification();
+            this.storeService.saveGruppoScelto(gruppo);
+
+            // recupero le domande del gruppo e le metto in storage
+            this.fileService.getTappe(gruppo.tappe).subscribe(res => {
+              this.storeService.saveTappeScelte(res);
+              // vado alla pagina successiva solo quando ho salvato in storage le tappe relative al gruppo scelto
+              this.navCtr.navigateRoot('/list');
+            });
+          }
+        }
+      ]
+    });
+
+    await alert.present();
   }
 }

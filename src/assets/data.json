@@ -4,56 +4,65 @@
       "nome": "CESARI",
       "id": 1,
       "tappe": [
-        "2A",
         "6A",
         "5A",
         "PAUSA",
         "12A",
-        "13A"
+        "13A",
+        "FINE"
       ]
     },
     {
       "nome": "AUGUSTI",
       "id": 2,
       "tappe": [
-        "",
-        "",
-        "",
-        "",
-        ""
+        "2B",
+        "6B",
+        "7A",
+        "9A",
+        "11A",
+        "PAUSA",
+        "13A",
+        "FINE"
       ]
     },
     {
       "nome": "TRAIANEI",
       "id": 3,
       "tappe": [
-        "",
-        "",
-        "",
-        "",
-        ""
+        "2C",
+        "6B",
+        "8A",
+        "10A",
+        "12A",
+        "PAUSA",
+        "13A",
+        "FINE"
       ]
     },
     {
       "nome": "ADRIANI",
       "id": 4,
       "tappe": [
-        "",
-        "",
-        "",
-        "",
-        ""
+        "2A",
+        "6C",
+        "5A",
+        "PAUSA",
+        "12A",
+        "FINE"
       ]
     },
     {
       "nome": "AURELIANI",
       "id": 5,
       "tappe": [
-        "",
-        "",
-        "",
-        "",
-        ""
+        "3A",
+        "6D",
+        "7A",
+        "11A",
+        "PAUSA",
+        "12A",
+        "FINE"
       ]
     }
   ],
@@ -62,7 +71,17 @@
       "codice": "PAUSA",
       "nome": "PAUSA",
       "testo": "Pausa di 15 minuti",
-      "immagine": "/assets/img/tappe/",
+      "immagine": "/assets/img/tappe/pausa.jpg",
+      "coordinatex": "",
+      "coordinatey": "",
+      "abilitata": 1,
+      "completata": 0
+    },
+    {
+      "codice": "FINE",
+      "nome": "FINE",
+      "testo": "PERCORSO FINITO",
+      "immagine": "/assets/img/tappe/fine.png",
       "coordinatex": "",
       "coordinatey": "",
       "abilitata": 1,

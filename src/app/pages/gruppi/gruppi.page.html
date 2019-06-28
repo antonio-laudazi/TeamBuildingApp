@@ -14,7 +14,7 @@
     <ion-list-header>
       <ion-label>Scegli il gruppo</ion-label>
     </ion-list-header>
-    <ion-item *ngFor="let gruppo of gruppi" (click)="saveGruppoScelto(gruppo)">
+    <ion-item *ngFor="let gruppo of gruppi" (click)="presentAlertConfirm(gruppo)">
       <ion-label> {{gruppo.nome}}</ion-label>
     </ion-item>
   </ion-list>

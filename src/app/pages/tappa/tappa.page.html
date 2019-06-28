@@ -15,7 +15,7 @@
     </ion-card-content>
   </ion-card>
 
-  <ion-list>
+  <ion-list *ngIf="tappaSelezionata.domanda">
     <ion-radio-group>
       <ion-list-header>
         <ion-text>{{tappaSelezionata.domanda.testo}}</ion-text>
@@ -28,6 +28,7 @@
     </ion-radio-group>
   </ion-list>
 
-  <ion-button (click)="salvaRisposta()">Salva risposta</ion-button>
-  <ion-button (click)="openMap()">Open Map</ion-button>
+  <ion-button  *ngIf="tappaSelezionata.domanda" (click)="salvaRisposta()">Salva risposta</ion-button>
+  <ion-button  *ngIf="tappaSelezionata.domanda || tappaSelezionata.nome == 'FINE'" (click)="openMap()">Open Map</ion-button>
+  <ion-button  *ngIf="!tappaSelezionata.domanda && tappaSelezionata.nome == 'PAUSA'" (click)="finePausa()">Fine Pausa</ion-button>
 </ion-content>

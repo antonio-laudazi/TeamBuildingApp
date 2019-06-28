@@ -17,7 +17,7 @@ export class SplashPage implements OnInit {
   }
 
   ngOnInit() {
-    this.storeService.clear(); // da togliere quando sono finiti i test
+    // this.storeService.clear(); // da togliere quando sono finiti i test
     // aspetto 5 secondi e poi vado al disclaimer oppure ai gruppi oppure alle tappe
     setTimeout( () => {
       this.storeService.controllaCondizioniAccettate().then((accettate) => {

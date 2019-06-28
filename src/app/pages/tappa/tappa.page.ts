@@ -42,8 +42,14 @@ export class TappaPage implements OnInit {
     window.open('geo:lat,lon?q=' + geocoords + '(' + encodeURI(this.tappaSelezionata.nome) + ')', '_system');
   }
 
+  public finePausa(){
+    this.tappaSelezionata.completata = 1;
+    this.storeService.saveTappaCompletata(this.tappaSelezionata);
+    this.showAlert('', 'Pausa Finita, riprendiamo il percorso!!!', '');
+    this.navCtr.back();
+  }
+
   public salvaRisposta() {
-    console.log(this.rispostaSelezionata);
     if (this.rispostaSelezionata !== undefined) {
       const codiceRipostaCorretta = this.tappaSelezionata.domanda.rispostavalida;
       if (codiceRipostaCorretta === this.rispostaSelezionata.codice) {

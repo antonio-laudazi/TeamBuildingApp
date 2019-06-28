@@ -14,8 +14,8 @@
   <ion-list>
     <ion-item *ngFor="let tappa of elencoTappe"  (click)="goToTappa(tappa)" [ngClass]="tappa.completata ? 'completata' : (!tappa.abilitata ? 'disabilitata' : (getCodiceProssima() === tappa.codice ? 'prossima' : ''))">
       <ion-label>{{tappa.nome}}</ion-label>
-      <ion-button *ngIf="tappa.abilitata === 1" (click)="disabilitaTappa(tappa); $event.stopPropagation()">Disabilita</ion-button>
-      <ion-button *ngIf="tappa.abilitata === 0" (click)="abilitaTappa(tappa); $event.stopPropagation()">Abilita</ion-button>
+      <ion-button *ngIf="tappa.abilitata === 1 && !(tappa.nome == 'FINE')" (click)="disabilitaTappa(tappa); $event.stopPropagation()">Disabilita</ion-button>
+      <ion-button *ngIf="tappa.abilitata === 0 && !(tappa.nome == 'FINE')" (click)="abilitaTappa(tappa); $event.stopPropagation()">Abilita</ion-button>
     </ion-item>
   </ion-list>
 
