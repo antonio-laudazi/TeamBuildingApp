@@ -1,2 +1,0 @@
-# TeamBuildingApp
-TeamBuildingApp
