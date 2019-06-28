@@ -1,21 +1,19 @@
 <ion-header>
-  <ion-toolbar>
-    <ion-buttons slot="start">
-      <ion-menu-button></ion-menu-button>
-    </ion-buttons>
-    <ion-title>
-      Gruppi
-    </ion-title>
-  </ion-toolbar>
+    <ion-toolbar color="primary">
+        <ion-buttons slot="start">
+            <ion-menu-button></ion-menu-button>
+        </ion-buttons>
+        <ion-title text-center>
+            Scegli il gruppo
+        </ion-title>
+    </ion-toolbar>
 </ion-header>
 
 <ion-content>
-  <ion-list lines="none">
-    <ion-list-header>
-      <ion-label>Scegli il gruppo</ion-label>
-    </ion-list-header>
-    <ion-item *ngFor="let gruppo of gruppi" (click)="saveGruppoScelto(gruppo)">
-      <ion-label> {{gruppo.nome}}</ion-label>
-    </ion-item>
-  </ion-list>
+    <ion-list lines="full" no-padding>
+        <ion-item *ngFor="let gruppo of gruppi" (click)="saveGruppoScelto(gruppo)" color="secondary"  expandable>
+            <ion-ripple-effect></ion-ripple-effect>
+            <ion-label> {{gruppo.nome}}</ion-label>
+        </ion-item>
+    </ion-list>
 </ion-content>
