@@ -13,12 +13,12 @@ export class AppComponent {
     {
       title: 'Gruppi',
       url: '/gruppi',
-      icon: 'home'
+      icon: 'people'
     },
     {
       title: 'Tappe',
       url: '/list',
-      icon: 'list'
+      icon: 'locate'
     },
     {
       title: 'Parole',

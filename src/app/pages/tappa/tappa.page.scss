@@ -2,20 +2,26 @@
     margin: 0;
     border: none;
     box-shadow: none;
-    ion-card-content {
-        padding: 0;
-    }
-    ion-card-subtitle {
-        padding: 15px;
-        padding-bottom: 0;
-        font-size: .8em;
-        color: #999;
-    }
-    ion-card-title {
-        padding: 15px;
-    }
-    ion-img {
-        max-height: 35vh;
-        overflow: hidden;
-    }
+}
+ion-card-content {
+    padding: 0;
+}
+ion-card-subtitle {
+    padding: 15px;
+    padding-bottom: 0;
+    font-size: .9em;
+    font-weight: 400;
+    font-style: italic;
+    color: #999;
+}
+ion-card-title {
+    padding: 15px;
+    background: #fefefe url('/assets/img/round-help-button.png') no-repeat -30px center;
+}
+ion-img {
+    max-height: 35vh;
+    overflow: hidden;
+}
+ion-text {
+    margin: 10px 0;
 }

@@ -1,25 +1,36 @@
+ion-content {
+    --background: #006FCF url('/assets/img/AE_bg.png') no-repeat center center /cover;
+}
+ion-list {
+    background: transparent;
+}
+ion-item {
+    box-shadow: 0 3px 3px rgba(0,0,0,.1);
+    border-radius: 3px;
+    opacity: .9;
+}
+ion-label {
+    
+    //padding: 10px 20px;
+}
+.item{
+    margin: 20px;
+}
 .completata {
-    ion-item{
-        color: rgb(138, 211, 30);
-    }
+    color: rgb(138, 211, 30);
+    opacity: 1;
 }
 
 .disabilitata {
-    ion-item{
     color: rgba(0, 0, 0,.2);
-    }
 }
 
 .prossima {
-    ion-item{
-        color: rgb(6, 128, 235);
-    }
+    color: rgb(6, 128, 235);
+    opacity: 1;
 }
 ion-header {
-ion-item{
-   --ion-background-color:transparent;
-}
-}
-ion-label {
-    padding: 15px 0;
+    ion-item{
+    --ion-background-color:transparent;
+    }
 }
