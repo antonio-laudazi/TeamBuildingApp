@@ -1,4 +1,21 @@
-.welcome-card ion-img {
-  max-height: 35vh;
-  overflow: hidden;
+.welcome-card {
+    margin: 0;
+    border: none;
+    box-shadow: none;
+    ion-card-content {
+        padding: 0;
+    }
+    ion-card-subtitle {
+        padding: 15px;
+        padding-bottom: 0;
+        font-size: .8em;
+        color: #999;
+    }
+    ion-card-title {
+        padding: 15px;
+    }
+    ion-img {
+        max-height: 35vh;
+        overflow: hidden;
+    }
 }

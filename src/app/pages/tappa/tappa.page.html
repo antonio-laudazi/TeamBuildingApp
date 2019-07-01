@@ -1,5 +1,5 @@
 <ion-header>
-  <ion-toolbar>
+  <ion-toolbar color="verde">
     <ion-back-button slot="start" defaultHref="/list"></ion-back-button>
     <ion-title>
       {{tappaSelezionata.nome}}
@@ -11,16 +11,13 @@
   <ion-card class="welcome-card">
     <ion-card-content>
       <ion-img src="{{tappaSelezionata.immagine}}"></ion-img>
-      <p>{{tappaSelezionata.testo}}</p>
+      <ion-card-subtitle>{{tappaSelezionata.testo}}Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse ultricies neque et massa auctor euismod. Sed erat velit, malesuada cursus scelerisque eu, posuere scelerisque ipsum.</ion-card-subtitle>
+      <ion-card-title>{{tappaSelezionata.domanda.testo}}</ion-card-title>
     </ion-card-content>
   </ion-card>
 
-  <ion-list *ngIf="tappaSelezionata.domanda">
+  <ion-list *ngIf="tappaSelezionata.domanda" lines="full">
     <ion-radio-group>
-      <ion-list-header>
-        <ion-text>{{tappaSelezionata.domanda.testo}}</ion-text>
-      </ion-list-header>
-
       <ion-item *ngFor="let risposta of tappaSelezionata.domanda.risposte">
         <ion-text>{{risposta.testo}}</ion-text>
         <ion-radio slot="end" value={{risposta.codice}} (ionSelect)="rispostaChecked(risposta)"></ion-radio>
@@ -28,7 +25,28 @@
     </ion-radio-group>
   </ion-list>
 
-  <ion-button  *ngIf="tappaSelezionata.domanda" (click)="salvaRisposta()">Salva risposta</ion-button>
-  <ion-button  *ngIf="tappaSelezionata.domanda || tappaSelezionata.nome == 'FINE'" (click)="openMap()">Open Map</ion-button>
-  <ion-button  *ngIf="!tappaSelezionata.domanda && tappaSelezionata.nome == 'PAUSA'" (click)="finePausa()">Fine Pausa</ion-button>
 </ion-content>
+<ion-footer>
+    <ion-toolbar color="verde">
+        <ion-grid>
+            <ion-row>
+                <ion-col  *ngIf="tappaSelezionata.domanda" (click)="salvaRisposta()" text-center>
+                    <ion-icon name="checkmark" style="font-size: 2em;"></ion-icon><br>
+                    <small>Salva Risposta</small>
+                </ion-col>
+                <ion-col *ngIf="tappaSelezionata.domanda || tappaSelezionata.nome == 'FINE'" (click)="openMap()" text-center>
+                    <ion-icon name="locate" style="font-size: 2em;"></ion-icon><br>
+                    <small>Apri Mappa</small>
+                </ion-col>
+                <ion-col *ngIf="!tappaSelezionata.domanda && tappaSelezionata.nome == 'PAUSA'" (click)="finePausa()" text-center>
+                    <ion-icon name="play" style="font-size: 2em;"></ion-icon><br>
+                    <small>Fine Pausa</small>
+                </ion-col>
+            </ion-row>
+        </ion-grid>
+            <!--<ion-button  *ngIf="tappaSelezionata.domanda" (click)="salvaRisposta()">Salva risposta</ion-button>
+            <ion-button  *ngIf="tappaSelezionata.domanda || tappaSelezionata.nome == 'FINE'" (click)="openMap()">Open Map</ion-button>
+            <ion-button  *ngIf="!tappaSelezionata.domanda && tappaSelezionata.nome == 'PAUSA'" (click)="finePausa()">Fine Pausa</ion-button>-->
+
+    </ion-toolbar>
+</ion-footer>

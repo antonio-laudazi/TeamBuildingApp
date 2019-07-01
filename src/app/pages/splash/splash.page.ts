@@ -39,7 +39,7 @@ export class SplashPage implements OnInit {
           this.navCtr.navigateRoot('/text');
         }
       });
-    }, 5000 );
+    }, 500 );
   }
 
 }

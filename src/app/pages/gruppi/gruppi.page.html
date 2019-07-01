@@ -1,21 +1,18 @@
 <ion-header>
-  <ion-toolbar>
+  <ion-toolbar color="primary">
     <ion-buttons slot="start">
       <ion-menu-button></ion-menu-button>
     </ion-buttons>
     <ion-title>
-      Gruppi
+    Scegli il gruppo
     </ion-title>
   </ion-toolbar>
 </ion-header>
 
-<ion-content>
-  <ion-list lines="none">
-    <ion-list-header>
-      <ion-label>Scegli il gruppo</ion-label>
-    </ion-list-header>
+<ion-content color="secondary">
+  <ion-list lines="none" no-padding>
     <ion-item *ngFor="let gruppo of gruppi" (click)="presentAlertConfirm(gruppo)" color="{{gruppo.colore}}">
-      <ion-label> {{gruppo.nome}}</ion-label>
+      <ion-label text-center>{{gruppo.nome}}</ion-label>
     </ion-item>
   </ion-list>
 </ion-content>

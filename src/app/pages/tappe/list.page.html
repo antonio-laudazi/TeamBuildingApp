@@ -1,22 +1,30 @@
 <ion-header>
-  <ion-toolbar>
+  <ion-toolbar color="verde">
     <ion-buttons slot="start">
       <ion-menu-button></ion-menu-button>
     </ion-buttons>
     <ion-title>
       Tappe
     </ion-title>
+    <ion-item slot="end" color="verde">
+        <small>il tuo punteggio è</small>&nbsp;<ion-badge color="bianco">{{punteggio}}</ion-badge>
+    </ion-item>
   </ion-toolbar>
 </ion-header>
 
 <ion-content>
-    <ion-label>Il tuo punteggio è {{punteggio}}</ion-label>
-  <ion-list>
-    <ion-item *ngFor="let tappa of elencoTappe"  (click)="goToTappa(tappa)" [ngClass]="tappa.completata ? 'completata' : (!tappa.abilitata ? 'disabilitata' : (getCodiceProssima() === tappa.codice ? 'prossima' : ''))">
-      <ion-label>{{tappa.nome}}</ion-label>
-      <ion-button *ngIf="tappa.abilitata === 1 && !(tappa.nome == 'FINE')" (click)="disabilitaTappa(tappa); $event.stopPropagation()">Disabilita</ion-button>
-      <ion-button *ngIf="tappa.abilitata === 0 && !(tappa.nome == 'FINE')" (click)="abilitaTappa(tappa); $event.stopPropagation()">Abilita</ion-button>
-    </ion-item>
+  <ion-list lines="full" no-padding>
+    <ion-item-sliding *ngFor="let tappa of elencoTappe"  (click)="goToTappa(tappa)" [ngClass]="tappa.completata ? 'completata' : (!tappa.abilitata ? 'disabilitata' : (getCodiceProssima() === tappa.codice ? 'prossima' : ''))">
+        <!--<ion-item-options side="end">
+            <ion-item-option *ngIf="tappa.abilitata === 1 && !(tappa.nome == 'FINE')" (click)="disabilitaTappa(tappa); $event.stopPropagation()">Disabilita</ion-item-option>
+            <ion-item-option *ngIf="tappa.abilitata === 0 && !(tappa.nome == 'FINE')" (click)="abilitaTappa(tappa); $event.stopPropagation()">Abilita</ion-item-option>
+        </ion-item-options>-->
+
+        <ion-item>
+            <ion-label>{{tappa.nome}}</ion-label>
+            <ion-toggle *ngIf="!(tappa.nome == 'FINE')" checked [(ngModel)]="tappa.abilitata"></ion-toggle>
+        </ion-item>
+    </ion-item-sliding>
   </ion-list>
 
 </ion-content>

@@ -1,11 +1,25 @@
 .completata {
-    color: rgb(138, 211, 30);
+    ion-item{
+        color: rgb(138, 211, 30);
+    }
 }
 
 .disabilitata {
-    color: rgb(138, 138, 138);
+    ion-item{
+    color: rgba(0, 0, 0,.2);
+    }
 }
 
 .prossima {
-    color: rgb(6, 128, 235);
+    ion-item{
+        color: rgb(6, 128, 235);
+    }
+}
+ion-header {
+ion-item{
+   --ion-background-color:transparent;
+}
+}
+ion-label {
+    padding: 15px 0;
 }
