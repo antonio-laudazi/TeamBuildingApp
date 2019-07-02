@@ -3,6 +3,7 @@ ion-content {
 }
 ion-list {
     background: transparent;
+    padding: 0;
 }
 ion-item {
     box-shadow: 0 3px 3px rgba(0,0,0,.1);
@@ -10,8 +11,8 @@ ion-item {
     opacity: .9;
 }
 ion-label {
-    padding: 20px 0 20px 0;
-    font-size: 1.5em !important;
+    /*padding: 20px 0 20px 0;
+    font-size: 1.5em !important;*/
 }
 .item{
     margin: 20px;

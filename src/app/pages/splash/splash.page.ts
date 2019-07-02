@@ -13,7 +13,7 @@ export class SplashPage implements OnInit {
 
     constructor(private navCtr: NavController,
         private storeService: StoreService) {
-        this.splashScreenimagePath = 'assets/img/splash/American_Express_logo.png';
+        this.splashScreenimagePath = 'assets/img/splash/American_Express_logo.jpg';
     }
 
     ngOnInit() {
@@ -39,7 +39,7 @@ export class SplashPage implements OnInit {
                     this.navCtr.navigateRoot('/text');
                 }
             });
-        }, 5000);
+        }, 10000);
     }
 
 }

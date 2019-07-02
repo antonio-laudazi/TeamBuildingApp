@@ -75,7 +75,7 @@
     {
       "codice": "PAUSA",
       "nome": "PAUSA",
-      "testo": "Pausa di 15 minuti",
+      "testo": "",
       "immagine": "/assets/img/tappe/pausa.jpg",
       "coordinatex": "41.906908",
       "coordinatey": "12.465677",
@@ -85,7 +85,7 @@
     {
       "codice": "FINE",
       "nome": "FINE",
-      "testo": "PERCORSO FINITO",
+      "testo": "",
       "immagine": "/assets/img/tappe/fine.png",
       "coordinatex": "",
       "coordinatey": "",
@@ -293,7 +293,7 @@
     {
       "codice": "6A",
       "nome": "Fontana di Trevi",
-      "testo": "",
+      "testo": "La fontana è la mostra terminale dell’acquedotto Vergine - unico degli acquedotti antichi (19 a.C.) ininterrottamente in uso fino ai nostri giorni - è la più nota delle fontane romane e la più famosa nel mondo per la sua scenografica monumentalità.Si dice che se si getta una moneta alle proprie spalle lanciandola sulla spalla sinistra si tornerà a Roma. Dalla fontana si raccolgono circa 3.000 euro al giorno in monete, che vengono poi destinati alla Caritas. Un’altra differenza rispetto alle altre fontane è che all’acqua viene aggiunta una grande quantità di sale per proteggere il marmo dal calcare contenuto nell’acqua.",
       "immagine": "/assets/img/tappe/Fontana_di_Trevi.jpg",
       "coordinatex": "41.900796",
       "coordinatey": "12.4834874",
@@ -326,7 +326,7 @@
     {
       "codice": "6B",
       "nome": "Fontana di Trevi",
-      "testo": "",
+      "testo": "La fontana è la mostra terminale dell’acquedotto Vergine - unico degli acquedotti antichi (19 a.C.) ininterrottamente in uso fino ai nostri giorni - è la più nota delle fontane romane e la più famosa nel mondo per la sua scenografica monumentalità.Si dice che se si getta una moneta alle proprie spalle lanciandola sulla spalla sinistra si tornerà a Roma. Dalla fontana si raccolgono circa 3.000 euro al giorno in monete, che vengono poi destinati alla Caritas. Un’altra differenza rispetto alle altre fontane è che all’acqua viene aggiunta una grande quantità di sale per proteggere il marmo dal calcare contenuto nell’acqua.",
       "immagine": "/assets/img/tappe/Fontana_di_Trevi.jpg",
       "coordinatex": "41.900796",
       "coordinatey": "12.4834874",
@@ -359,7 +359,7 @@
     {
       "codice": "6C",
       "nome": "Fontana di Trevi",
-      "testo": "",
+      "testo": "La fontana è la mostra terminale dell’acquedotto Vergine - unico degli acquedotti antichi (19 a.C.) ininterrottamente in uso fino ai nostri giorni - è la più nota delle fontane romane e la più famosa nel mondo per la sua scenografica monumentalità.Si dice che se si getta una moneta alle proprie spalle lanciandola sulla spalla sinistra si tornerà a Roma. Dalla fontana si raccolgono circa 3.000 euro al giorno in monete, che vengono poi destinati alla Caritas. Un’altra differenza rispetto alle altre fontane è che all’acqua viene aggiunta una grande quantità di sale per proteggere il marmo dal calcare contenuto nell’acqua.",
       "immagine": "/assets/img/tappe/Fontana_di_Trevi.jpg",
       "coordinatex": "41.900796",
       "coordinatey": "12.4834874",
@@ -392,7 +392,7 @@
     {
       "codice": "6D",
       "nome": "Fontana di Trevi",
-      "testo": "",
+      "testo": "La fontana è la mostra terminale dell’acquedotto Vergine - unico degli acquedotti antichi (19 a.C.) ininterrottamente in uso fino ai nostri giorni - è la più nota delle fontane romane e la più famosa nel mondo per la sua scenografica monumentalità.Si dice che se si getta una moneta alle proprie spalle lanciandola sulla spalla sinistra si tornerà a Roma. Dalla fontana si raccolgono circa 3.000 euro al giorno in monete, che vengono poi destinati alla Caritas. Un’altra differenza rispetto alle altre fontane è che all’acqua viene aggiunta una grande quantità di sale per proteggere il marmo dal calcare contenuto nell’acqua.",
       "immagine": "/assets/img/tappe/Fontana_di_Trevi.jpg",
       "coordinatex": "41.900796",
       "coordinatey": "12.4834874",

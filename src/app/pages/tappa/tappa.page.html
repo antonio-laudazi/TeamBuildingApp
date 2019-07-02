@@ -11,8 +11,9 @@
     <ion-card class="welcome-card">
         <ion-card-content>
             <ion-img src="{{tappaSelezionata.immagine}}"></ion-img>
-            <ion-card-subtitle>{{tappaSelezionata.testo}}Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque vulputate efficitur magna, quis aliquet est porttitor quis. Pellentesque urna leo, mollis a ante et, tincidunt tincidunt magna.</ion-card-subtitle>
-            <ion-card-title>{{tappaSelezionata.domanda.testo}}</ion-card-title>
+            <ion-card-subtitle *ngIf="!(tappaSelezionata.testo == '')">{{tappaSelezionata.testo}}</ion-card-subtitle>
+            <ion-img src="/assets/img/map.jpg" *ngIf="tappaSelezionata.domanda || tappaSelezionata.nome == 'FINE'" (click)="openMap()"></ion-img>
+            <ion-card-title *ngIf="tappaSelezionata.domanda">{{tappaSelezionata.domanda.testo}}</ion-card-title>
         </ion-card-content>
     </ion-card>
 
@@ -30,10 +31,10 @@
     <ion-toolbar color="verde">
         <ion-grid>
             <ion-row>
-                <ion-col *ngIf="tappaSelezionata.domanda || tappaSelezionata.nome == 'FINE'" (click)="openMap()" text-center>
+                <!--<ion-col *ngIf="tappaSelezionata.domanda || tappaSelezionata.nome == 'FINE'" (click)="openMap()" text-center>
                     <ion-icon name="locate" style="font-size: 2em;"></ion-icon><br>
                     <small>Apri Mappa</small>
-                </ion-col>
+                </ion-col>-->
                 <ion-col *ngIf="!tappaSelezionata.domanda && tappaSelezionata.nome == 'PAUSA'" (click)="finePausa()" text-center>
                     <ion-icon name="play" style="font-size: 2em;"></ion-icon><br>
                     <small>Fine Pausa</small>

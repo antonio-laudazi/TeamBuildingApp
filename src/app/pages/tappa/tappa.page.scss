@@ -7,16 +7,16 @@ ion-card-content {
     padding: 0;
 }
 ion-card-subtitle {
-    padding: 15px;
-    padding-bottom: 0;
+    padding: 20px 15px;
     font-size: .9em;
     font-weight: 400;
     font-style: italic;
     color: #999;
+    background: #fefefe url('/assets/img/round-info-button.png') no-repeat -15px -15px;
 }
 ion-card-title {
-    padding: 15px;
-    background: #fefefe url('/assets/img/round-help-button.png') no-repeat -30px center;
+    padding: 20px 15px;
+    background: #fefefe url('/assets/img/round-help-button.png') no-repeat -15px -15px;
 }
 ion-img {
     max-height: 35vh;
