@@ -110,7 +110,7 @@
     --ion-color-bianco: #ffffff;
     --ion-color-bianco-rgb: 255, 255, 255;
     --ion-color-bianco-contrast: #000000;
-    --ion-color-bianco-contrast-rgb: 255, 255, 255;
+    --ion-color-bianco-contrast-rgb: 0, 0, 0;
     --ion-color-bianco-shade: #e0e0e0;
     --ion-color-bianco-tint: #ffffff;
 
@@ -161,12 +161,12 @@
 
     /** Arancione **/
 
-    --ion-color-arancione: #eca500;
-    --ion-color-arancione-rgb: 236, 165, 0;
+    --ion-color-arancione: #F37135;
+    --ion-color-arancione-rgb: 243, 113, 53;
     --ion-color-arancione-contrast: #ffffff;
     --ion-color-arancione-contrast-rgb: 255, 255, 255;
-    --ion-color-arancione-shade: #d09100;
-    --ion-color-arancione-tint: #eeae1a;
+    --ion-color-arancione-shade: #d6632f;
+    --ion-color-arancione-tint: #f47f49;
 
     .ion-color-arancione {
         --ion-color-base: var(--ion-color-arancione) !important;
