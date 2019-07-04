@@ -722,157 +722,242 @@
   ],
   "domandetemporizzate": [
     {
-      "testo": "testo 1",
+      "testo": "Quante tra le 150 top tourist attractions sono a Roma?",
       "codice": 1,
       "punteggio": 1,
       "risposte": [
         {
           "codice": 1,
-          "testo": "1"
+          "testo": "25"
         },{
           "codice": 2,
-          "testo": "2"
+          "testo": "58"
         },{
           "codice": 3,
-          "testo": "3"
-        },{
-          "codice": 4,
-          "testo": "4"
+          "testo": "72"
+        }
+      ],
+      "codicerisposta": 2
+    },
+    {
+      "testo": "Quante delle 58 top tourist attractions a Roma accettavano AMEX a giugno 2018?",
+      "codice": "2",
+      "punteggio": 1,
+      "risposte": [
+        {
+          "codice": 1,
+          "testo": "29"
+        },
+        {
+          "codice": 2,
+          "testo": "35"
+        },
+        {
+          "codice": 3,
+          "testo": "47"
         }
       ],
       "codicerisposta": 1
     },
     {
-      "testo": "",
-      "codice": "",
+      "testo": "Quante delle 58 top tourist attractions a Roma accettano AMEX oggi?",
+      "codice": 3,
       "punteggio": 1,
       "risposte": [
         {
-          "codice": "",
-          "testo": ""
+          "codice": 1,
+          "testo": "35"
+        },
+        {
+          "codice": 2,
+          "testo": "49"
+        },
+        {
+          "codice": 3,
+          "testo": "55"
         }
       ],
-      "codicerisposta": ""
+      "codicerisposta": 3
     },
     {
-      "testo": "",
-      "codice": "",
+      "testo": "Quali sono i tre hold outs a Roma nelle attrazioni turistiche?",
+      "codice": 4,
       "punteggio": 1,
       "risposte": [
         {
-          "codice": "",
-          "testo": ""
+          "codice": 1,
+          "testo": "Complesso del Vittoriano, Scuderia del Quirinale, Museo della Civiltà Romana"
+        },
+        {
+          "codice": 2,
+          "testo": "Scuderia del Quirinale, Villa Pamphili, Ostia Antica"
+        },
+        {
+          "codice": 3,
+          "testo": "Complesso del Vittoriano, Ostia Antica, Scuderia del Quirinale"
         }
       ],
-      "codicerisposta": ""
+      "codicerisposta": 3
     },
     {
-      "testo": "",
-      "codice": "",
+      "testo": "Quante visite POP vengono fatte dal team di marketing regionale con la loro agenzia a Roma?",
+      "codice": 5,
       "punteggio": 1,
       "risposte": [
         {
-          "codice": "",
-          "testo": ""
+          "codice": 1,
+          "testo": "10K"
+        },
+        {
+          "codice": 2,
+          "testo": "17K"
+        },
+        {
+          "codice": 3,
+          "testo": "30K"
         }
       ],
-      "codicerisposta": ""
+      "codicerisposta": 2
     },
     {
-      "testo": "",
-      "codice": "",
+      "testo": "Quante chiamate di activation / anti attrition sono state fatte fin’ora agli esercenti di Roma quest'anno?",
+      "codice": 6,
       "punteggio": 1,
       "risposte": [
         {
-          "codice": "",
-          "testo": ""
+          "codice": 1,
+          "testo": "20K"
+        },
+        {
+          "codice": 2,
+          "testo": "25K"
+        },
+        {
+          "codice": 3,
+          "testo": "30K"
         }
       ],
-      "codicerisposta": ""
+      "codicerisposta": 3
     },
     {
-      "testo": "",
-      "codice": "",
+      "testo": "Qual è il tasso di riattivazione delle chiamate anti-abbandono?",
+      "codice": 7,
       "punteggio": 1,
       "risposte": [
         {
-          "codice": "",
-          "testo": ""
+          "codice": 1,
+          "testo": "1%"
+        },
+        {
+          "codice": 2,
+          "testo": "3.4%"
+        },
+        {
+          "codice": 3,
+          "testo": "5.7%"
         }
       ],
-      "codicerisposta": ""
+      "codicerisposta": 3
     },
     {
-      "testo": "",
-      "codice": "",
+      "testo": "In quale mese è stata lanciata quest'anno la campagna “Dove Sei Tu”?",
+      "codice": 8,
       "punteggio": 1,
       "risposte": [
         {
-          "codice": "",
-          "testo": ""
+          "codice": 1,
+          "testo": "Aprile"
+        },
+        {
+          "codice": 2,
+          "testo": "Maggio"
+        },
+        {
+          "codice": 3,
+          "testo": "Giugno"
         }
       ],
-      "codicerisposta": ""
+      "codicerisposta": 1
     },
     {
-      "testo": "",
-      "codice": "",
+      "testo": "L'offerta per i ristoranti che era live in giugno era: “spendi 100, prendi...”?",
+      "codice": 9,
       "punteggio": 1,
       "risposte": [
         {
-          "codice": "",
-          "testo": ""
+          "codice": 1,
+          "testo": "10"
+        },
+        {
+          "codice": 2,
+          "testo": "20"
+        },
+        {
+          "codice": 3,
+          "testo": "50"
         }
       ],
-      "codicerisposta": ""
+      "codicerisposta": 2
     },
     {
-      "testo": "",
-      "codice": "",
+      "testo": "In che mese è stato ufficialmente lanciato il nostro SMP?",
+      "codice": 10,
       "punteggio": 1,
       "risposte": [
         {
-          "codice": "",
-          "testo": ""
+          "codice": 1,
+          "testo": "Aprile"
+        },
+        {
+          "codice": 2,
+          "testo": "Maggio"
+        },
+        {
+          "codice": 3,
+          "testo": "Giugno"
         }
       ],
-      "codicerisposta": ""
+      "codicerisposta": 3
     },
     {
-      "testo": "",
-      "codice": "",
+      "testo": "Cos'è l'offerta SMP?",
+      "codice": 11,
       "punteggio": 1,
       "risposte": [
         {
-          "codice": "",
-          "testo": ""
+          "codice": 1,
+          "testo": "0% fino a 3K"
+        },
+        {
+          "codice": 2,
+          "testo": "0% fino a 10K"
+        },
+        {
+          "codice": 3,
+          "testo": "0,9% fino a 3K"
         }
       ],
-      "codicerisposta": ""
+      "codicerisposta": 1
     },
     {
-      "testo": "",
-      "codice": "",
+      "testo": "Quanti NLIF devono essere acquisiti a Roma nel 2019?",
+      "codice": 12,
       "punteggio": 1,
       "risposte": [
         {
-          "codice": "",
-          "testo": ""
-        }
-      ],
-      "codicerisposta": ""
-    },
-    {
-      "testo": "",
-      "codice": "",
-      "punteggio": 1,
-      "risposte": [
+          "codice": 1,
+          "testo": "3K"
+        },
         {
-          "codice": "",
-          "testo": ""
+          "codice": 2,
+          "testo": "5K"
+        },
+        {
+          "codice": 3,
+          "testo": "6.5K"
         }
       ],
-      "codicerisposta": ""
+      "codicerisposta": 3
     }
   ]
 }

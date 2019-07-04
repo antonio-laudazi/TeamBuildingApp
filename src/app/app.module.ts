@@ -14,6 +14,7 @@ import { LocalNotifications } from '@ionic-native/local-notifications/ngx';
 import { HttpClientModule } from '@angular/common/http';
 import { StoreService } from './services/services.store';
 import { FileService } from './services/services.file';
+import { DomandeTemporizzateService } from './services/services.domandeTemporizzate';
 
 @NgModule({
   declarations: [AppComponent],
@@ -31,6 +32,7 @@ import { FileService } from './services/services.file';
     LocalNotifications,
     StoreService,
     FileService,
+    DomandeTemporizzateService,
     { provide: RouteReuseStrategy, useClass: IonicRouteStrategy }
   ],
   bootstrap: [AppComponent]

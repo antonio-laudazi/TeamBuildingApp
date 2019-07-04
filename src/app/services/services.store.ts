@@ -68,6 +68,14 @@ export class StoreService {
         return await this.storage.get('codiceDomanda');
     }
 
+    public saveDomandeTemporizzate(domande: string) {
+        this.storage.set('domandeTemporizzate', domande);
+    }
+
+    public async getDomandeTemporizzate(): Promise<string> {
+        return await this.storage.get('domandeTemporizzate');
+    }
+
     public salvaCondizioniAccettate(): void{
         this.storage.set('condizioniAccettate', 'true');
     }

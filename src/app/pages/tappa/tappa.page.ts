@@ -1,8 +1,13 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, OnDestroy } from '@angular/core';
 import { AlertController, LoadingController, NavController } from '@ionic/angular';
 import { ActivatedRoute, Router } from '@angular/router';
 import { Modello } from '../../models/gruppo.namespace';
 import { StoreService } from '../../services/services.store';
+import { FileService } from '../../services/services.file';
+import { DomandeTemporizzateService } from '../../services/services.domandeTemporizzate';
+
+import { Subject } from 'rxjs';
+import { takeUntil } from 'rxjs/operators';
 
 @Component({
   selector: 'app-tappa',
@@ -11,13 +16,18 @@ import { StoreService } from '../../services/services.store';
 })
 
 export class TappaPage implements OnInit {
+
+  private unsubscribe: Subject<boolean> = new Subject<boolean>();
   public tappaSelezionata: Modello.Tappa;
   private rispostaSelezionata: Modello.Risposta;
+  private domandeTemporizzate;
 
   constructor(
     private alertCtrl: AlertController,
     private loadingCtrl: LoadingController,
     private storeService: StoreService,
+    private domandeTemporizzateService: DomandeTemporizzateService,
+    private fileService: FileService,
     private route: ActivatedRoute,
     private navCtr: NavController,
     private router: Router) {
@@ -36,6 +46,9 @@ export class TappaPage implements OnInit {
     console.log(this.rispostaSelezionata);
   }
 
+  public goBack() {
+    this.router.navigate(['list'], {});
+  }
 
   public openMap() {
     const geocoords = this.tappaSelezionata.coordinatex + ',' + this.tappaSelezionata.coordinatey;
@@ -55,7 +68,7 @@ export class TappaPage implements OnInit {
       if (codiceRipostaCorretta === this.rispostaSelezionata.codice) {
         this.tappaSelezionata.completata = 1;
         this.storeService.saveTappaCompletata(this.tappaSelezionata);
-        this.showAlert('', 'Risposta è corretta!!!', '');
+        this.showAlert('', 'Bravi, avete dato la risposta esatta e sbloccato la prossima destinazione!', '');
         this.navCtr.back();
       } else {
         this.showLoader();
@@ -67,8 +80,8 @@ export class TappaPage implements OnInit {
 
   public async showLoader() {
     const loading = await this.loadingCtrl.create({
-      message: 'Hellooo',
-      duration: 10000
+      message: 'La risposta non è corretta. Avete 2 minuti di penalità prima di poter rispondere alla prossima domanda.',
+      duration: 120000
     });
     await loading.present();
   }
@@ -79,5 +92,24 @@ export class TappaPage implements OnInit {
       message: msg,
       buttons: ['Ok']
     }).then(alert => alert.present());
+  }
+
+  ionViewDidEnter() {
+    this.fileService.getDomandeTemporizzate().subscribe(res => {
+      this.domandeTemporizzate = res;
+      if (this.domandeTemporizzate !== undefined) {
+        this.domandeTemporizzateService.timerScattato.pipe(takeUntil(this.unsubscribe)).subscribe(r => {
+          const prossimaDomanda = this.domandeTemporizzateService.getProssimaDomanda(this.domandeTemporizzate);
+          if (prossimaDomanda != null) {
+            this.domandeTemporizzateService.openRadioAlert(prossimaDomanda);
+          }
+        });
+      }
+    });
+  }
+
+  ionViewDidLeave() {
+    this.unsubscribe.next(true);
+    this.unsubscribe.unsubscribe();
   }
 }

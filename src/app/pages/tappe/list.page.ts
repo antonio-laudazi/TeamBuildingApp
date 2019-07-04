@@ -1,28 +1,61 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, OnDestroy } from '@angular/core';
 import { StoreService } from '../../services/services.store';
 import { Modello } from '../../models/gruppo.namespace';
 import { NavigationExtras, Router } from '@angular/router';
+import { DomandeTemporizzateService } from '../../services/services.domandeTemporizzate';
+import { FileService } from '../../services/services.file';
+
+import { Subject } from 'rxjs';
+import { takeUntil } from 'rxjs/operators';
 
 @Component({
   selector: 'app-list',
   templateUrl: 'list.page.html',
   styleUrls: ['list.page.scss']
 })
-export class ListPage implements OnInit {
-  public punteggio: number;
+export class ListPage implements OnInit, OnDestroy {
 
+  private unsubscribe: Subject<boolean> = new Subject<boolean>();
+  public punteggio: number;
   public elencoTappe: Array<Modello.Tappa>;
+  private domandeTemporizzate;
+  private subscription; 
+
+  private sottoscritto = false;
 
   constructor(
     private storeService: StoreService,
+    private domandeTemporizzateService: DomandeTemporizzateService,
+    private fileService: FileService,
     private router: Router) {
-
+      this.punteggio = this.domandeTemporizzateService.getPunteggio();
     }
 
   ngOnInit() {
+
+    if (!this.sottoscritto) {
+      this.sottoscritto = true;
+      this.fileService.getDomandeTemporizzate().subscribe(res => {
+        this.domandeTemporizzate = res;
+        if (this.domandeTemporizzate !== undefined) {
+          this.subscription = this.domandeTemporizzateService.timerScattato.subscribe(r => {
+            const prossimaDomanda = this.domandeTemporizzateService.getProssimaDomanda(this.domandeTemporizzate);
+            if (prossimaDomanda != null) {
+              this.domandeTemporizzateService.openRadioAlert(prossimaDomanda);
+            }
+          });
+        }
+      });
+    }
+
+    this.domandeTemporizzateService.punteggioVariato.pipe(takeUntil(this.unsubscribe)).subscribe(r => {
+      this.punteggio = r;
+    });
+
     this.storeService.getTappeScelte().then((tappeScelteString) => {
       this.elencoTappe = JSON.parse(tappeScelteString);
     });
+
     this.storeService.getPunteggio().then((punteggio) => {
       if (punteggio) {
         this.punteggio = punteggio;
@@ -30,6 +63,13 @@ export class ListPage implements OnInit {
         this.punteggio = 0;
       }
     });
+  }
+
+  ngOnDestroy(): void {
+    if (this.sottoscritto) {
+      this.subscription.unsubscribe();
+      this.sottoscritto = false;
+    }
   }
 
   public goToTappa(tappa) {
@@ -41,6 +81,30 @@ export class ListPage implements OnInit {
         }
       };
       this.router.navigate(['tappa'], navigationExtras);
+    }
+  }
+
+  ionViewDidEnter() {
+    if (!this.sottoscritto) {
+      this.sottoscritto = true;
+      this.fileService.getDomandeTemporizzate().subscribe(res => {
+        this.domandeTemporizzate = res;
+        if (this.domandeTemporizzate !== undefined) {
+          this.subscription = this.domandeTemporizzateService.timerScattato.subscribe(r => {
+            const prossimaDomanda = this.domandeTemporizzateService.getProssimaDomanda(this.domandeTemporizzate);
+            if (prossimaDomanda != null) {
+              this.domandeTemporizzateService.openRadioAlert(prossimaDomanda);
+            }
+          });
+        }
+      });
+    }
+  }
+
+  ionViewDidLeave() {
+    if (this.sottoscritto) {
+      this.subscription.unsubscribe();
+      this.sottoscritto = false;
     }
   }
 

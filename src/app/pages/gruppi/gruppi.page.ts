@@ -1,11 +1,12 @@
 import { Component, OnInit } from '@angular/core';
 import { LocalNotifications, ELocalNotificationTriggerUnit } from '@ionic-native/local-notifications/ngx';
 import { AlertController, Platform, LoadingController, NavController } from '@ionic/angular';
+import { Router } from '@angular/router';
 import { HttpClient } from '@angular/common/http';
 import { StoreService } from '../../services/services.store';
 import { FileService } from '../../services/services.file';
+import { DomandeTemporizzateService } from '../../services/services.domandeTemporizzate';
 import { Modello } from '../../models/gruppo.namespace';
-import { JsonResponse } from '../../models/json.namespace';
 
 @Component({
   selector: 'app-gruppi',
@@ -18,6 +19,11 @@ export class GruppiPage implements OnInit {
   private domandeTemporizzate: Array<Modello.DomandaTemporizzata>;
   private tappe: Array<Modello.Tappa>;
 
+  private intervalloDomande = 20000;
+  private indiceDomanda = 0;
+  private maxIndiceDomanda = 12;
+  private idIntervallo;
+
   constructor(
     private plt: Platform,
     private localNotifications: LocalNotifications,
@@ -25,8 +31,10 @@ export class GruppiPage implements OnInit {
     private loadingCtrl: LoadingController,
     private storeService: StoreService,
     private fileService: FileService,
+    private domandeTemporizzateService: DomandeTemporizzateService,
     private navCtr: NavController,
-    private http: HttpClient) {
+    private http: HttpClient,
+    private router: Router) {
 
   }
 
@@ -35,84 +43,38 @@ export class GruppiPage implements OnInit {
     this.fileService.getGruppi().subscribe(res => {
       this.gruppi = res;
     });
-
-    this.fileService.getDomandeTemporizzate().subscribe(res => {
-      this.domandeTemporizzate = res;
-    });
-
-    this.plt.ready().then(() => {
-      this.localNotifications.on('click').subscribe(res => {
-        let msg = res.data ? res.data.mydata : '';
-        this.showAlert(res.text, msg);
-      });
-
-      this.localNotifications.on('trigger').subscribe(res => {
-        let msg = res.data ? res.data.mydata : '';
-        this.showAlert(res.text, msg);
-      });
-    });
   }
 
-  private scheduleNotification() {
-    this.localNotifications.schedule({
-      id: 1,
-      title: 'Attention',
-      text: 'Simons Notification',
-      data: { mydata: 'My hidden message this is' },
-      trigger: { in: 5, unit: ELocalNotificationTriggerUnit.SECOND },
-      foreground: true // Show the notification while app is open
-    });
-  }
+  // private scheduleNotification() {
+  //   this.localNotifications.schedule({
+  //     id: 1,
+  //     title: 'Attention',
+  //     text: 'Simons Notification',
+  //     data: { mydata: 'My hidden message this is' },
+  //     trigger: { in: 5, unit: ELocalNotificationTriggerUnit.SECOND },
+  //     foreground: true // Show the notification while app is open
+  //   });
+  // }
 
-  public showAlert(sub, msg) {
-    var domandaTempCodice: number;
-    this.storeService.getLastDomandaTemporizzata().then((codiceD) => {
-      if (codiceD !== undefined) {
-        domandaTempCodice = codiceD + 1;
-      } else {
-        domandaTempCodice = 1;
-      }
-    });
-    var domandaTemp: Modello.DomandaTemporizzata = this.domandeTemporizzate.filter((d) => {
-      return d.codice === domandaTempCodice;
-    })[0];
-    var inputsDomande: Array<{
-      name: string,
-      value: number
-    }> = new Array();
-    for (let index = 0; index < domandaTemp.risposte.length; index++) {
-      const risposta = domandaTemp.risposte[index];
-      inputsDomande.push({ name: risposta.testo, value: risposta.codice });
-    }
-    this.alertCtrl.create({
-      subHeader: sub,
-      message: msg,
-      inputs: inputsDomande,
-      buttons: [{
-        text: 'Rispondi',
-        handler: () => {
-          console.log('rispondi pressed');
-        }
-      }],
-      backdropDismiss: false
-    }).then(alert => alert.present());
-  }
 
-  public saveGruppoScelto(gruppo: Modello.Gruppo) {
+  // public saveGruppoScelto(gruppo: Modello.Gruppo) {
 
-    this.storeService.clear();
-    this.storeService.salvaCondizioniAccettate();
-    this.scheduleNotification();
-    this.storeService.saveGruppoScelto(gruppo);
+  //   this.storeService.clear();
+  //   this.storeService.salvaCondizioniAccettate();
+  //   this.scheduleNotification();
+  //   this.storeService.saveGruppoScelto(gruppo);
 
-    // recupero le domande del gruppo e le metto in storage
-    this.fileService.getTappe(gruppo.tappe).subscribe(res => {
-      this.storeService.saveTappeScelte(res);
-      this.navCtr.navigateRoot('/list'); // vado alla pagina successiva solo quando ho salvato in storage le tappe relative al gruppo scelto
-    });
-  }
+  //   // this.idIntervallo = setInterval(() => this.openRadioAlert(this.domandeTemporizzate[this.indiceDomanda]), this.intervalloDomande);
+  //   // quando scelgo un gruppo deve partire il percorso delle domande temporizzate.
 
-  async presentAlertConfirm(gruppo) {
+  //   // recupero le domande del gruppo e le metto in storage
+  //   this.fileService.getTappe(gruppo.tappe).subscribe(res => {
+  //     this.storeService.saveTappeScelte(res);
+  //     this.navCtr.navigateRoot('/list'); // vado alla pagina successiva solo quando ho salvato in storage le tappe relative al gruppo scelto
+  //   });
+  // }
+
+  async presentAlertConfirm(gruppo) { // quando cambio il gruppo devo avvertire delle conseguenze
     const alert = await this.alertCtrl.create({
       header: 'Cambio Gruppo',
       message: 'Cambiare il gruppo azzererà il percorso fatto fino ad adesso. Continuare?',
@@ -129,8 +91,14 @@ export class GruppiPage implements OnInit {
           handler: () => {
             this.storeService.clear();
             this.storeService.salvaCondizioniAccettate();
-            this.scheduleNotification();
+            // this.scheduleNotification();
             this.storeService.saveGruppoScelto(gruppo);
+
+            this.domandeTemporizzateService.resettaIndice();
+            this.domandeTemporizzateService.resettaPunteggio();
+            this.domandeTemporizzateService.resettaTimer();
+
+            this.domandeTemporizzateService.startTimer();
 
             // recupero le domande del gruppo e le metto in storage
             this.fileService.getTappe(gruppo.tappe).subscribe(res => {
