@@ -1,4 +1,25 @@
+ion-content {
+    --background: #006FCF url('/assets/img/AE_bg.png') no-repeat center center /cover;
+}
+ion-list {
+    background: transparent;
+    padding: 0;
+}
+ion-item {
+    box-shadow: 0 3px 3px rgba(0,0,0,.1);
+    border-radius: 3px;
+    opacity: .9;
+}
 ion-label {
-    padding: 27px 0 26px 0;
-    font-size: 2em !important;
+    /*padding: 20px 0 20px 0;
+    font-size: 1.5em !important;*/
+}
+.item{
+    margin: 20px;
+}
+ion-icon {
+    font-size: 1.5em !important;
+    margin-right: 14px;
+    margin-left: 10px;
+
 }
