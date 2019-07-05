@@ -93,7 +93,7 @@ export class TappaPage implements OnInit {
         await loading.present();
         setTimeout(() => {
           loading.dismiss();
-        }, 120000);
+        }, 12000);
     }
 
     public showAlert(header, sub, msg) {

@@ -23,7 +23,7 @@ export class DomandeTemporizzateService {
 
     constructor(public alertCtrl: AlertController,
                 public storeService: StoreService) {
-        this.intervalloDomande = 60000;
+        this.intervalloDomande = 30000;
         this.storeService.getProssimaDomandaTemporizzata().then(data => {
             if (data !== null && data !== undefined) {
                 this.indiceDomanda = data;
