@@ -51,6 +51,7 @@ export class DomandeTemporizzateService {
             ]
         });
         const alertDomanda = await this.alertCtrl.create({
+            cssClass: 'custom-alert',
             header: domandaTemporizzata.testo,
             inputs: [
                 {
