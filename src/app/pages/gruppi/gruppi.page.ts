@@ -35,7 +35,6 @@ export class GruppiPage implements OnInit {
     private navCtr: NavController,
     private http: HttpClient,
     private router: Router) {
-
   }
 
   ngOnInit() {
@@ -70,6 +69,7 @@ export class GruppiPage implements OnInit {
   //   // recupero le domande del gruppo e le metto in storage
   //   this.fileService.getTappe(gruppo.tappe).subscribe(res => {
   //     this.storeService.saveTappeScelte(res);
+  // tslint:disable-next-line:max-line-length
   //     this.navCtr.navigateRoot('/list'); // vado alla pagina successiva solo quando ho salvato in storage le tappe relative al gruppo scelto
   //   });
   // }
@@ -93,6 +93,7 @@ export class GruppiPage implements OnInit {
             this.storeService.salvaCondizioniAccettate();
             // this.scheduleNotification();
             this.storeService.saveGruppoScelto(gruppo);
+            this.storeService.saveColoreGruppo(gruppo.colore);
 
             this.domandeTemporizzateService.resettaIndice();
             this.domandeTemporizzateService.resettaPunteggio();

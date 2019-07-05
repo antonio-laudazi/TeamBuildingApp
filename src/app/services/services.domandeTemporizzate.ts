@@ -23,7 +23,7 @@ export class DomandeTemporizzateService {
 
     constructor(public alertCtrl: AlertController,
                 public storeService: StoreService) {
-        this.intervalloDomande = 15000;
+        this.intervalloDomande = 60000;
         this.storeService.getProssimaDomandaTemporizzata().then(data => {
             if (data !== null && data !== undefined) {
                 this.indiceDomanda = data;
@@ -98,8 +98,11 @@ export class DomandeTemporizzateService {
             if (!risposto) {
                 alertDomanda.dismiss();
                 tempoScaduto.present();
+                setTimeout(() => {
+                    tempoScaduto.dismiss();
+                }, 5000);
             }
-        }, 3000);
+        }, 15000);
     }
 
     public showAlert(header, sub, msg) {

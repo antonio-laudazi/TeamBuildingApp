@@ -1,5 +1,5 @@
 <ion-header>
-    <ion-toolbar color="verde">
+    <ion-toolbar color="{{colore}}">
         <ion-back-button (click)="goBack()" slot="start"></ion-back-button>
         <ion-title>
             {{tappaSelezionata.nome}}
@@ -21,14 +21,14 @@
         <ion-radio-group>
             <ion-item *ngFor="let risposta of tappaSelezionata.domanda.risposte">
                 <ion-text>{{risposta.testo}}</ion-text>
-                <ion-radio slot="end" value={{risposta.codice}} (ionSelect)="rispostaChecked(risposta)" color="verde"></ion-radio>
+                <ion-radio slot="end" value={{risposta.codice}} (ionSelect)="rispostaChecked(risposta)" color="{{colore}}"></ion-radio>
             </ion-item>
         </ion-radio-group>
     </ion-list>
 
 </ion-content>
 <ion-footer>
-    <ion-toolbar color="verde">
+    <ion-toolbar color="{{colore}}">
         <ion-grid>
             <ion-row>
                 <!--<ion-col *ngIf="tappaSelezionata.domanda || tappaSelezionata.nome == 'FINE'" (click)="openMap()" text-center>

@@ -19,7 +19,8 @@ export class ListPage implements OnInit, OnDestroy {
   public punteggio: number;
   public elencoTappe: Array<Modello.Tappa>;
   private domandeTemporizzate;
-  private subscription; 
+  private subscription;
+  public colore: string;
 
   private sottoscritto = false;
 
@@ -34,6 +35,12 @@ export class ListPage implements OnInit, OnDestroy {
     }
 
   ngOnInit() {
+
+    this.storeService.getColoreGruppo().then(data => {
+      if (data) {
+        this.colore = data;
+      }
+    });
 
     // se apro la app e vengo mandato direttamente sulla lista delle tappe devo far partire il timer
     if(!this.domandeTemporizzateService.isTimerRunning()) {
@@ -133,5 +140,4 @@ export class ListPage implements OnInit, OnDestroy {
     tappa.abilitata = 1;
     this.storeService.saveTappeScelte(this.elencoTappe);
   }
-
 }

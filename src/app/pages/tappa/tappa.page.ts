@@ -21,6 +21,7 @@ export class TappaPage implements OnInit {
     public tappaSelezionata: Modello.Tappa;
     private rispostaSelezionata: Modello.Risposta;
     private domandeTemporizzate;
+    public colore: string;
 
     constructor(
         private alertCtrl: AlertController,
@@ -39,6 +40,11 @@ export class TappaPage implements OnInit {
     }
 
     ngOnInit() {
+      this.storeService.getColoreGruppo().then(data => {
+        if (data) {
+          this.colore = data;
+        }
+      });
     }
 
     public rispostaChecked(risposta) {
@@ -82,10 +88,12 @@ export class TappaPage implements OnInit {
         const loading = await this.loadingCtrl.create({
             cssClass: 'custom-loader',
             message: 'La risposta non è corretta.<br>Avete <b>2 minuti</b> di penalità prima di poter rispondere alla prossima domanda.',
-            spinner: null,
-            duration: 120000
+            spinner: null
         });
         await loading.present();
+        setTimeout(() => {
+          loading.dismiss();
+        }, 120000);
     }
 
     public showAlert(header, sub, msg) {
@@ -114,4 +122,5 @@ export class TappaPage implements OnInit {
         this.unsubscribe.next(true);
         this.unsubscribe.unsubscribe();
     }
+
 }

@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { NavController } from '@ionic/angular';
 import { StoreService } from '../../services/services.store';
+import { ScreenOrientation } from '@ionic-native/screen-orientation/ngx';
 
 @Component({
     selector: 'app-splash',
@@ -12,8 +13,10 @@ export class SplashPage implements OnInit {
     public splashScreenimagePath: string;
 
     constructor(private navCtr: NavController,
-            private storeService: StoreService) {
+                private storeService: StoreService,
+                private screenOrientation: ScreenOrientation) {
         this.splashScreenimagePath = 'assets/img/splash/American_Express_logo.jpg';
+        this.screenOrientation.lock(this.screenOrientation.ORIENTATIONS.PORTRAIT);
     }
 
     ngOnInit() {

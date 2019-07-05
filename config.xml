@@ -92,4 +92,5 @@
     <plugin name="uk.co.workingedge.phonegap.plugin.launchnavigator" source="npm">
         <variable name="GOOGLE_API_KEY_FOR_ANDROID" value="AIzaSyCsbgnY1QjIZxAFu11W7_xTK0NSmrRCYV0" />
     </plugin>
+    <plugin name="cordova-plugin-screen-orientation" spec="^3.0.2" />
 </widget>
