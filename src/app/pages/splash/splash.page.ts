@@ -12,7 +12,7 @@ export class SplashPage implements OnInit {
     public splashScreenimagePath: string;
 
     constructor(private navCtr: NavController,
-        private storeService: StoreService) {
+            private storeService: StoreService) {
         this.splashScreenimagePath = 'assets/img/splash/American_Express_logo.jpg';
     }
 

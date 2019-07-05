@@ -28,10 +28,18 @@ export class ListPage implements OnInit, OnDestroy {
     private domandeTemporizzateService: DomandeTemporizzateService,
     private fileService: FileService,
     private router: Router) {
-      this.punteggio = this.domandeTemporizzateService.getPunteggio();
+      this.storeService.getPunteggio().then(data => {
+        this.punteggio = data;
+      });
     }
 
   ngOnInit() {
+
+    // se apro la app e vengo mandato direttamente sulla lista delle tappe devo far partire il timer
+    if(!this.domandeTemporizzateService.isTimerRunning()) {
+      this.domandeTemporizzateService.resettaTimer();
+      this.domandeTemporizzateService.startTimer();
+    }
 
     if (!this.sottoscritto) {
       this.sottoscritto = true;

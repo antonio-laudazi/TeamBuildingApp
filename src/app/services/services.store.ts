@@ -27,6 +27,14 @@ export class StoreService {
         return await this.storage.get('gruppoScelto');
     }
 
+    public saveColoreGruppo(colore: string) {
+        this.storage.set('coloreGruppo', colore);
+    }
+
+    public async getColoreGruppo(): Promise<string> {
+        return await this.storage.get('coloreGruppo');
+    }
+
     public async getTappeScelte(): Promise<string> {
         return await this.storage.get('tappeScelte');
     }
@@ -60,11 +68,11 @@ export class StoreService {
         return await this.storage.get('punteggio');
     }
 
-    public saveLastDomandaTemporizzata(codiceDomanda: number) {
+    public saveProssimaDomandaTemporizzata(codiceDomanda: number) {
         this.storage.set('codiceDomanda', codiceDomanda);
     }
 
-    public async getLastDomandaTemporizzata(): Promise<number> {
+    public async getProssimaDomandaTemporizzata(): Promise<number> {
         return await this.storage.get('codiceDomanda');
     }
 

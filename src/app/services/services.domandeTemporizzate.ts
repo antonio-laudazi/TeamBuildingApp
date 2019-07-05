@@ -2,11 +2,11 @@ import { Injectable } from '@angular/core';
 import { Subject } from 'rxjs';
 import { AlertController } from '@ionic/angular';
 import { Modello } from '../models/gruppo.namespace';
+import { StoreService } from '../services/services.store';
 
 @Injectable()
 export class DomandeTemporizzateService {
 
-    private punteggio: number;
     private intervalloDomande: number;
     private indiceDomanda: number;
     private maxIndiceDomanda: number;
@@ -21,10 +21,17 @@ export class DomandeTemporizzateService {
     public punteggioVariatoSubject: Subject<number> = new Subject<number>();
     public punteggioVariato = this.punteggioVariatoSubject.asObservable();
 
-    constructor(public alertCtrl: AlertController) {
-        this.punteggio = 0;
+    constructor(public alertCtrl: AlertController,
+                public storeService: StoreService) {
         this.intervalloDomande = 15000;
-        this.indiceDomanda = 0;
+        this.storeService.getProssimaDomandaTemporizzata().then(data => {
+            if (data !== null && data !== undefined) {
+                this.indiceDomanda = data;
+            } else {
+                this.indiceDomanda = 0;
+            }
+            this.storeService.saveProssimaDomandaTemporizzata(0);
+        });
         this.maxIndiceDomanda = 12;
     }
 
@@ -76,10 +83,10 @@ export class DomandeTemporizzateService {
                             if (data === domandaTemporizzata.codicerisposta) {
                                 // risposta corretta
                                 this.aumentaPunteggio();
-                                alert('RISPOSTA CORRETTA!');
+                                this.showAlert('', 'RISPOSTA ESATTA! HAI GUADAGNATO 1 PUNTO', '');
                             } else {
                                 // risposta errata
-                                alert('RISPOSTA ERRATA!');
+                                this.showAlert('', 'RISPOSTA SBAGLIATA!', '');
                             }
                         }
                     }
@@ -95,31 +102,44 @@ export class DomandeTemporizzateService {
         }, 3000);
     }
 
+    public showAlert(header, sub, msg) {
+        this.alertCtrl.create({
+          subHeader: sub,
+          message: msg,
+          buttons: ['Ok']
+        }).then(alert => alert.present());
+    }
+
     public getProssimaDomanda(domande: Array<Modello.DomandaTemporizzata>): Modello.DomandaTemporizzata {
         if (this.indiceDomanda === this.maxIndiceDomanda) {
             return null;
         }
-        const domanda = domande[this.getIndiceDomanda()];
+        const domanda = domande[this.indiceDomanda];
         this.aumentaIndice();
         return domanda;
     }
 
-    public getPunteggio(): number {
-        return this.punteggio;
-    }
-
     public aumentaPunteggio(): void {
-        this.punteggio++;
-        this.punteggioVariatoSubject.next(this.punteggio);
+        this.storeService.getPunteggio().then(data => {
+            let punteggio = data;
+            punteggio++;
+            this.storeService.savePunteggio(punteggio);
+            this.punteggioVariatoSubject.next(punteggio);
+        });
     }
 
     public resettaPunteggio(): void {
-        this.punteggio = 0;
-        this.punteggioVariatoSubject.next(this.punteggio);
+        this.storeService.savePunteggio(0);
+        this.punteggioVariatoSubject.next(0);
     }
 
     public resettaTimer(): void {
         clearInterval(this.idIntervallo);
+        this.idIntervallo = false;
+    }
+
+    public isTimerRunning(): boolean {
+        return (this.idIntervallo !== false && this.idIntervallo !== undefined);
     }
 
     public getIndiceDomanda(): number {
@@ -128,9 +148,11 @@ export class DomandeTemporizzateService {
 
     public aumentaIndice(): void {
         this.indiceDomanda++;
+        this.storeService.saveProssimaDomandaTemporizzata(this.indiceDomanda);
     }
 
     public resettaIndice(): void {
         this.indiceDomanda = 0;
+        this.storeService.saveProssimaDomandaTemporizzata(0);
     }
 }

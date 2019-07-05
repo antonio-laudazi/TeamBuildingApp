@@ -87,8 +87,8 @@
       "nome": "FINE",
       "testo": "",
       "immagine": "/assets/img/tappe/fine.png",
-      "coordinatex": "",
-      "coordinatey": "",
+      "coordinatex": "41.906890",
+      "coordinatey": "12.465594",
       "abilitata": 1,
       "completata": 0
     },
